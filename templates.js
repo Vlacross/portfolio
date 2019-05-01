@@ -72,7 +72,6 @@ const resume =
     <div class="id-info box">
       <p>Tim Vlasuk</p>
       <p>Portland, OR</p>
-      <p>(360) 306-2117</p>
       <p>timvlasuk@gmail.com</p>
     </div>
     <h2></h2>
