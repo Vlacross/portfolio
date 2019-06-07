@@ -7,16 +7,128 @@
     <link rel="stylesheet" type="text/css" href="introHeader.css">
     <link rel="stylesheet" type="text/css" href="profileHeader.css">
     <link href="https://fonts.googleapis.com/css?family=Exo+2|Nunito+Sans|PT+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Diplomata+SC|Jacques+Francois+Shadow|Monofett|Plaster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento|Diplomata+SC|Jacques+Francois+Shadow|Monofett|Plaster" rel="stylesheet">
     <title>Tim Vlasuk</title>
   </head>
 
   <body>
+    <section id="top"></section>
+    <a class="topLink" href="#top">^</a>
+
+      <nav class="navMenu navDiv">
+          <a class="navLink a1" href="#">About</a>
+          <a class="navLink a2" href="#projects">Projects</a>
+          <a class="navLink a3" href="#">Resume</a>
+          <a class="navLink a4" href="#contact">Contact</a>
+      </nav>
     
     <main role="main">
-        <div class="wrapper">
 
-        </div>
+        <header  class="nameWrapper">
+          <h1 class="name">
+            Tim<span class="nameLength">othy</span> <span class="nameLengthLast">Vlasuk</span> <span class="nameToggleLast">Vlasuk</span> <span class="nameToggleInitial">V</span>
+          </h1>
+        </header>
+
+            <div class="wrapper">
+              <div class="bio">
+                <div>
+                  <h1>I'm Tim</h1>
+                  <h2>A Portland based developer.</h2>
+                  <h2>1.44 MegaBytes of twisted steel and tech appeal.</h2>
+                </div>
+                
+                
+                <div>
+                <h3></h3>
+                <h3></h3>
+                </div>
+                
+              </div>
+
+
+            <section>
+              <div class="wrapper projectsWrapper" id="projects">
+                
+                  <ul class="projects-list">
+              
+                    <li class="box projectCard">
+                     <div class="project-wrapper">
+                       <div class="project-details">
+                          <div>
+                            <h2>MTB-trail-finder</h2>
+                            <h3>(JQuery, Javascript)</h3>
+                            <p>A simple app to find local mountainbike trails. </p>
+                          </div>
+                          
+                          <div class="linksDiv">
+                            <a class="link" href="https://github.com/Vlacross/mtb-trail-api">Code</a>
+                            <a class="link" href="https://vlacross.github.io/">Live</a>
+                          </div>
+                       </div>
+                        <img class="mtb-img" src="/mtb-1--500w.png" />
+                     </div>
+                    </li>
+
+                    <li class="box projectCard">
+                        <div class="project-wrapper rsvp">
+                          <img class="mtb-img" src="/double-phones-rsvp.png" />
+                          <div class="project-details">
+                              <div>
+                                <h2>RSVP-event coordination platform</h2>
+                                <h3>(Javascript, Jquery, Express, MongooseJS, mocha/chai)</h3>
+                                <p>An app for event planning and coordination.</p>
+                              </div>
+                            
+                              <div class="linksDiv">
+                                <a class="link" href="https://github.com/Vlacross/RSVP">Code</a>
+                                <a class="link" href="https://rsvp-no-regrets.herokuapp.com/">Live</a>
+                              </div>
+                          </div>
+                        </div>
+                       </li>
+                   
+                    <li class="box projectCard">
+                      <div>
+                      <h2>Title - graphics</h2>
+                      <h3>(HTML, CSS)</h3>
+                      </div>
+              
+                      <div class="linksDiv">
+                        <a class="link" href="https://github.com/Vlacross/Port-practice">Code</a>
+                        <a class="link" href="https://vlacross.github.io/Port-practice/">Live</a>
+                      </div>
+                      
+                    </li>
+              
+                  </ul>
+                </div>
+              
+              </div>
+            </section>
+
+            <section class="contact" id="contact">
+                <div class="contact-list">
+                  <ul class="contact-list">
+              
+                    <li class="listingCard githubCard">
+                      <a class="github" href="https://github.com/Vlacross">Github</a>
+                    </li>
+              
+                    <li class="listingCard linkdInCard">
+                      <a class="linkdIn" href="https://www.linkedin.com/in/timothy-vlasuk-76709916b/">LinkIn</a>
+                    </li>
+              
+                    <li class="listingCard emailCard">
+                        <span class="email">timvlasuk@gmail.com</span>
+                    </li>
+              
+                  </ul>
+                </div>
+            </section>
+            
+
+        
     </main>
     <footer role="footer">
       
@@ -24,12 +136,12 @@
     </footer>
 
 
-    <script
+    <!-- <script
     src="https://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
     <script src="templates.js"></script>
-  <script src="script.js"></script>
+  <script src="script.js"></script> -->
   </body>
 
 </html>
