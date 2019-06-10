@@ -178,7 +178,6 @@ li {
 
 .contact-list {
   display: flex;
-  width: 80%;
   height: 100%;
   align-content: center;
   justify-content: space-evenly;
@@ -269,14 +268,16 @@ li {
 
 .mtb-img {
   max-height: 500px;
+  max-width: 400px;
 }
 
 .graphics {
-  max-height: 200px;
+  max-width: 400px;
+  max-height: 235px;
 }
 
-.rsvp {
-  max-height: 400px;
+.rsvp-img {
+  max-height: 500px;
   max-width: 500px;
 }
 
@@ -293,9 +294,6 @@ li {
     flex-direction: column-reverse;
   }
 
-  .mtb-img {
-    width: 100%;
-  }
 
 }
 
@@ -355,6 +353,14 @@ li {
     align-items: center;
     justify-content: center;
     transition-duration: 1000ms;
+  }
+
+  .mtb-img {
+    width: 100%;
+  }
+
+  .rsvp-img {
+    width: 100%;
   }
  
 }
