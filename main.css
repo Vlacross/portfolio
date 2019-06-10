@@ -256,10 +256,15 @@ li {
   box-shadow: 0 0 15px silver;
   transition-duration: 500ms;
   margin: 10px;
+  color: black;
 }
 
 .link:hover {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.517);
+}
+
+.link:visited {
+  color: rgb(44, 43, 43);
 }
 
 .mtb-img {
