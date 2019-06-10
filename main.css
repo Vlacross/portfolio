@@ -25,6 +25,10 @@ a:focus {
     outline: none; 
 }
 
+a:visited {
+  color: rgb(44, 43, 43);
+}
+
 .hidden {
   display: none;
 }
