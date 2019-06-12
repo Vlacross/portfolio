@@ -60,6 +60,7 @@ a:visited {
 }
 
 .navBanner {
+  color: rgba(192, 192, 192, 0.726);
   position: relative;
   justify-content: center;
   top: 0;
@@ -187,6 +188,19 @@ li {
 
 .bio h1 {
   font-size: 3em;
+}
+
+.bioIntro {
+  border-bottom: solid 1px silver;
+}
+
+.aboutMe {
+  font-size: 1.2em;
+  line-height: 200%;
+}
+
+.signa {
+  font-weight: 700;
 }
 
 
@@ -343,8 +357,6 @@ li {
   .bio {
    text-align: center;
   }
-
-  
 
 }
 
