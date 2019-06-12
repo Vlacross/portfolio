@@ -93,6 +93,10 @@ a:visited {
   padding: 20px;
 }
 
+.navMenu:active {
+  top: -120px;
+}
+
 /* .navDiv:hover {
   top: 120px;
 } */
@@ -367,6 +371,10 @@ li {
     justify-content: center;
     align-items: center;
     height: 160px;
+  }
+
+  .navMenu:active {
+    top: -160px;
   }
 
   .navBanner {
