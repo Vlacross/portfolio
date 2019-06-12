@@ -88,15 +88,14 @@ a:visited {
   left: 0;
   height: 100px;
   width: 100%;
-  top: -120px;
+  top: 0px;
   transition-duration: 1000ms;
   padding: 20px;
 }
 
-.navDiv:hover {
-  display: flex;
+/* .navDiv:hover {
   top: 120px;
-}
+} */
 
 
 .navLink {
@@ -367,9 +366,10 @@ li {
   .navMenu {
     justify-content: center;
     align-items: center;
+    height: 160px;
   }
 
-  .navMenu:hover {
+  .navBanner {
     height: 160px;
   }
 
