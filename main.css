@@ -98,7 +98,6 @@ a:visited {
 }
 
 .navLink {
-  margin: 0% 4% 4% 4%; 
   width: 20%;
   font-size: 1.5em;
   transition-duration: 500ms;
