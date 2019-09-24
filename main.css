@@ -13,13 +13,13 @@ a {
 }
 
 a:hover {
-  font-size: 1.8em;
+  /* font-size: 1.8em; */
     text-shadow: 0 0 35px rgba(4, 2, 78, 0.993);
     box-shadow: none;
 }
 
 a:focus {
-  font-size: 1.8em;
+  /* font-size: 1.8em; */
     text-shadow: 0 0 35px rgba(4, 2, 78, 0.993);  
     box-shadow: none; 
     outline: none; 
@@ -102,6 +102,10 @@ a:visited {
   font-size: 1.5em;
   transition-duration: 500ms;
   color: black;
+}
+
+.navLink:hover {
+  font-size: 1.8em;
 }
 
 li {
@@ -229,20 +233,58 @@ li {
   padding: 0px;
 }
 
-.contactCard {
-  height: 80px;
+.contactLink {
+  font-size: 1em;
 }
 
 .listingCard {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   border-radius: 12px;
   box-shadow: 0 0 15px black;
-  padding: 12px;
   margin: 8px;
+  height: 80px;
   width: 62%;
   min-width: 200px;
+}
+
+.resume-name {
+  display: unset;
+}
+
+.resume:hover .resume-name {
+  display: none;
+}
+
+.resume-link {
+  display: none;
+}
+
+.resume:hover .resume-link {
+  display: unset;
+}
+
+.email-text {
+  display: unset;
+}
+
+.email:hover .email-text {
+  display: none;
+}
+
+.email-address {
+  display: none;
+   
+}
+
+.email:hover .email-address {
+  display: unset;
+  border: none;
+  background: none;
+  font-family: inherit;
+  text-shadow: 0 0 35px rgba(4, 2, 78, 0.993);
 }
 
 .contact-banner {
