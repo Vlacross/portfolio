@@ -49,7 +49,6 @@ const emailBox =
 
 
   const mailSendView = (view) =>{
-    console.log(view)
     let msg;
   switch(view.type) {
     case 'load':

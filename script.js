@@ -29,7 +29,7 @@ const handleSubmit = (load, form) => {
   fetch(dest, options)
   .then(res => res.json())
   .then(resj => {
-    if (resj.message === 'Success') {
+    if (resj.message === 'Success!') {
       listen(() => sendLoad.el.innerHTML = mailSendView({type: 'success'}))
       
     } else {
