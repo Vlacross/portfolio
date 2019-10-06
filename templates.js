@@ -11,7 +11,7 @@ const emailBox =
           <legend></legend>
 
           <div class="form-element">
-          <label for="senders-name" class="senders-name-label">Return E-mail address*</label>
+          <label for="senders-name" class="senders-name-label">Name*</label>
             <input id="senders-name" class="form-input" type="text" placeholder="Your Name" autocomplete="nope" minlength="5" required />
           </div>
 
