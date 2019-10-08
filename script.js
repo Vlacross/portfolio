@@ -33,25 +33,24 @@ const handleSubmit = (load, form) => {
   
   let sendLoad = new mailSent;
   sendLoad.el.setAttribute('class', 'ebox-wrap')
-  // sendLoad.el.innerHTML = mailSendView({type: 'load'})
+  sendLoad.el.innerHTML = mailSendView({type: 'load'})
   document.body.appendChild(sendLoad.el)
   
-  listen(() => sendLoad.el.innerHTML = mailSendView({type: 'success'}))
   
   
-  // fetch(dest, options)
-  // .then(res => res.json())
-  // .then(resj => {
-  //   if (resj.message === 'Success!') {
-  //     listen(() => sendLoad.el.innerHTML = mailSendView({type: 'success'}))
+  fetch(dest, options)
+  .then(res => res.json())
+  .then(resj => {
+    if (resj.message === 'Success!') {
+      listen(() => sendLoad.el.innerHTML = mailSendView({type: 'success'}))
       
-  //   } else {
-  //     listen(() => sendLoad.el.innerHTML = mailSendView({type: 'undetermined'}))
-  //   }
-  // })
-  // .catch(err => {
-  //   listen(() => sendLoad.el.innerHTML = mailSendView({type: 'error', error: err}))
-  // })
+    } else {
+      listen(() => sendLoad.el.innerHTML = mailSendView({type: 'undetermined'}))
+    }
+  })
+  .catch(err => {
+    listen(() => sendLoad.el.innerHTML = mailSendView({type: 'error', error: err}))
+  })
 
 };
 
@@ -108,7 +107,7 @@ const watchEmail = () => {
   eScreen.el.innerHTML = emailBox
   document.body.appendChild(eScreen.el)
   eScreen.el.loadEvents();
-  // validateInputs();
+  validateInputs();
   let emailForm = document.querySelector('.email-form');
 
   [emailForm[6], emailForm[7]].forEach(button => {
