@@ -115,6 +115,10 @@ const validateInputs = () => {
   }
 
   function clearSubmit() {
+<<<<<<< HEAD
+=======
+    console.log('checking..')
+>>>>>>> 406ffbfeba8baa2d6aac32760741ca71c97c419b
     let stat = check()
     for (let k in stat) {
       if(stat[k] !== undefined) {form[7].setAttribute('disabled', true)}
