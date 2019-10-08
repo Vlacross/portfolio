@@ -73,16 +73,28 @@ const emailBox =
   return (
   `
   <section role="status" class="message-response">
+  
+
     <div class="message-box">
-      ${msg}
-      <div class="message-box-button">
-        <label for="status-return-button"></label>
-        <input id="status-return-button" class="mail-status-button" role="button" title="message status return button" type="button" value="Return">
+    <div class="response-return">
+    
+    <div class="response-burger" >
+      <label for="status-return-button"></label>
+      <input id="status-return-button" class="mail-status-button" role="button" title="message status return button" type="button" value="">
+        <div class="response-patty response-patty-one" ></div>
+        <div class="response-patty response-patty-two" ></div>
       </div>
+    </div>
+    <div class="message-box-inner-wrapper">
+      ${msg}
+      
+    </div>
     </div>
   </section>
   `)
 };
+
+/*<input id="status-return-button" class="mail-status-button" role="button" title="message status return button" type="button" value="Return"> */
 
 let checkInt;
 

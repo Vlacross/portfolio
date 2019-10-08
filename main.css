@@ -437,6 +437,7 @@ li {
   z-index: 2;
   overflow: scroll;
   padding-bottom: 20px;
+  overflow: auto;
 }
 
 .email-field {
@@ -522,22 +523,94 @@ li {
   font-size: 1.2em;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.response-return {
+  display: flex;
+  height: 10%;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.message-box-inner-wrapper {
+  height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.response-burger {
+  position: relative;
+  right: 0;
+  top: 0;
+  width: 70px; 
+  height: 70px; 
+  flex-direction: column; 
+  justify-content: space-around;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.response-patty {
+  border: solid 1px rgb(4, 106, 153);
+  background: rgb(4, 106, 153);
+  border-radius: 4px;
+  height: 8px;
+  z-index: 2;
+  position: relative;
+  transition-duration: 1200ms; 
+}
+
+.response-patty-one {
+  top: 42%;
+  transform: rotate(45deg);
+}
+
+.response-patty-two {
+  top: 32%;
+  transform: rotate(-45deg);
+}
+
+.response-burger:hover .response-patty-one, .response-burger:hover .response-patty-two {
+  top: unset;
+  left: unset;
+  transform: none;
+  border: none;
+  background: unset;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.response-burger:hover .response-patty-one {
+  border-bottom: solid 8px rgba(4, 106, 153);
+}
+
+.response-burger:hover .response-patty-two {
+  border-top: solid 8px rgba(4, 106, 153);
 }
 
 .mail-status-button {
   width: 100%;
   height: 100%;
   font-size: 1.2em;
+  position: absolute;
+  border: none;
+  background: none;
+  z-index:  3;
 }
 
-.message-box-button {
+/* .message-box-button {
   border: 2px solid white;
   width: 200px;
   height: 60px;
   border-radius: 5px;
-}
+} */
 
 /******************************************************************************************************/
 
@@ -674,6 +747,20 @@ li {
   
   .name {
     font-size: 1.1em;
+  }
+
+  .message-box {
+    padding-top: 0;
+    padding-right: 0;
+  }
+
+  .response-burger {
+    width: 40px;
+    height: 40px;
+  }
+
+  .response-patty-two {
+    top: 20%;
   }
 }
 
