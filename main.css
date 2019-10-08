@@ -662,6 +662,14 @@ li {
   .form-control {
     flex-direction: column;
   }
+
+  .nameWrapper {
+    align-items: unset;
+  }
+  
+  .name {
+    font-size: 1.1em;
+  }
 }
 
 @media only screen and (max-width: 520px) {
@@ -680,12 +688,14 @@ li {
     padding-top: unset;
   }
 
-  .name {
-    font-size: 1.1em;
-  }
+  
 
   .form-control {
     width: 300px;
+  }
+
+  .name {
+    text-align: unset;
   }
 }
 
