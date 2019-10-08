@@ -24,7 +24,7 @@ const emailBox =
 
           <div class="form-element">
           <label for="subject" class="subject-input-label">Subject*</label>
-          <input id="subject" class="form-input" type="textarea" maxlength="1000" placeholder="Let me know what you are contacting about" autocomplete="off" minlength="5" />
+          <input id="subject" class="form-input" type="textarea" maxlength="1000" placeholder="Message topic" autocomplete="off" minlength="5" />
           </div>
           
           <div class="form-element">
