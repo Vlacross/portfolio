@@ -636,6 +636,11 @@ li {
   overflow: scroll;
   padding-bottom: 20px;
   flex-direction: column;
+  overflow: auto;
+  }
+
+  .navLink {
+    color: white;
   }
 
   .navLink:visited {

@@ -65,13 +65,10 @@ function handleScroll() {
   } else {
     navBar.setAttribute('style', 'display: flex;')
   }
-  prevPos = window.scrollY
+  prevPos = window.scrollY;
   }
 
-  
 }
-
-
 
 
 function watchMenu() {
