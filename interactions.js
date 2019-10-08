@@ -1,10 +1,13 @@
 const navButton = document.querySelector('.burger-houser');
 const menuLink = document.querySelectorAll('.navLink');
 const menu = document.querySelector('.navMenu');
+const navBar = document.querySelector('.navDiv');
 const menuLabel = document.querySelector('.menu-label');
 const patties = document.querySelector('.burger-patty');
 const m1 = document.querySelector('.patty-one');
 const m2 = document.querySelector('.patty-two');
+
+let prevPos = 0;
 
 
 let mobileView = () => {
@@ -46,11 +49,37 @@ toggleMenu = () => {
   menu.getAttribute('open') === 'true' ? menuClose() : menuOpen()
 };
 
+
+
+
+
+function handleScroll() {
+
+  if (window.innerWidth < 600) {
+    return;
+  } else if (window.innerWidth > 600) {
+    if (window.scrollY == prevPos) {
+    return;
+  } else if(window.scrollY > prevPos) {
+    navBar.setAttribute('style', 'display: none;')
+  } else {
+    navBar.setAttribute('style', 'display: flex;')
+  }
+  prevPos = window.scrollY
+  }
+
+  
+}
+
+
+
+
 function watchMenu() {
   navButton.addEventListener('click', (e) => toggleMenu())
   window.addEventListener('resize', function() {
     mobileView()
   })
+  window.setInterval(handleScroll, 250)
 }
 
 
