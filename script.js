@@ -49,6 +49,8 @@ const closeEmail = (form) => {
 };
 
 const handleEmail = (form, cb, val) => {
+
+  window.clearInterval(checkInt);
  
   [form[6], form[7]].forEach(button => {
     let cleanButton = button.cloneNode(true)

@@ -84,6 +84,7 @@ const emailBox =
   `)
 };
 
+let checkInt;
 
 const validateInputs = () => {
   let form = document.querySelector('.email-form');
@@ -99,12 +100,20 @@ const validateInputs = () => {
       subject: (lengthCheck(form[4].value) && form[4].classList.remove('error')),
       text: (lengthCheck(form[5].value) && form[5].classList.remove('error'))
     }
-    for (let k in stat) {
-      if(stat[k] !== undefined) {return stat;}
-      if(stat[Object.keys(stat)[Object.keys(stat).length-1]] === undefined) {form[7].removeAttribute('disabled')}
-      }
+    
     return stat;
   }
+
+  function clearSubmit() {
+    console.log('checking..')
+    let stat = check()
+    for (let k in stat) {
+      if(stat[k] !== undefined) {form[7].setAttribute('disabled', true)}
+      if(stat[Object.keys(stat)[Object.keys(stat).length-1]] === undefined) {form[7].removeAttribute('disabled')}
+      }
+  }
+
+  checkInt = window.setInterval(clearSubmit, 500)
 
   for (let i = 2; i < 6; i++) {
     let stat = check()
