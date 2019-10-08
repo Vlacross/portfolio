@@ -103,5 +103,6 @@ const watchEmail = () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  emailLink.addEventListener('click', watchEmail)
+  emailLink.addEventListener('click', watchEmail);
+  watchMenu();
 });
