@@ -94,8 +94,6 @@ const emailBox =
   `)
 };
 
-/*<input id="status-return-button" class="mail-status-button" role="button" title="message status return button" type="button" value="Return"> */
-
 let checkInt;
 
 const validateInputs = () => {
