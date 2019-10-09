@@ -116,13 +116,14 @@ const validateInputs = () => {
 
   function clearSubmit() {
     let stat = check()
+    let allInputs = Object.keys(stat).length
     for (let k in stat) {
-      if(stat[k] !== undefined) {form[7].setAttribute('disabled', true)}
-      if(stat[Object.keys(stat)[Object.keys(stat).length-1]] === undefined) {form[7].removeAttribute('disabled')}
-      }
-  }
-
-  checkInt = window.setInterval(clearSubmit, 500)
+      if(stat[k] !== undefined) { form[7].setAttribute('disabled', true) }
+      else { allInputs-- }
+    }
+    if(allInputs === 0) { form[7].removeAttribute('disabled') }
+    }
+  checkInt = window.setInterval(clearSubmit, 5000)
 
   for (let i = 2; i < 6; i++) {
     let stat = check()
