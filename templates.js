@@ -123,7 +123,7 @@ const validateInputs = () => {
     }
     if(allInputs === 0) { form[7].removeAttribute('disabled') }
     }
-  checkInt = window.setInterval(clearSubmit, 5000)
+  checkInt = window.setInterval(clearSubmit, 500)
 
   for (let i = 2; i < 6; i++) {
     let stat = check()
