@@ -149,13 +149,3 @@ const validateInputs = () => {
   };
 
 };
-
-//     const handleKeydown = (e, cb, f) => {
-// console.log(e)
-//       if(e.code === 'Escape') {
-//             cb(f)
-//           }
-//     };
-
-    
-

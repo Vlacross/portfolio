@@ -101,6 +101,7 @@ a:visited {
   justify-content: space-around;
   border-radius: 50%;
   z-index: 2;
+  margin-top: 10px;
 }
 
 .burger-patty {
@@ -253,12 +254,9 @@ li {
 }
 
 .aboutMe {
-  font-size: 1.2em;
+  font-size: 1em;
   line-height: 200%;
-}
-
-.bio-script {
-  line-height: 500%;
+  max-width: 800px;
 }
 
 .signa {
@@ -275,23 +273,26 @@ li {
   justify-content: center;
   font-family: 'Exo 2', sans-serif;
   font-size: 1.2em;
+  height: 500px;
 }
 
 .contact-list {
   display: flex;
   height: 100%;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 0px;
+  width: 70%;
 }
 
 .contactLink {
+  color: black;
   font-size: 1em;
+  font-weight: 700;
   display: unset;
   border: none;
   background: none;
   font-family: inherit;
-  text-shadow: 0 0 35px rgba(4, 2, 78, 0.993);
 }
 
 .listingCard {
@@ -341,7 +342,6 @@ li {
 
 .contact-banner {
   font-size: 2em;
-  text-decoration: underline;
 }
 
 .name {
@@ -457,6 +457,8 @@ li {
 }
 
 .form-input {
+  background: white;
+  color: black;
   height: 60px;
   width: 600px;
   font-size: 1em;
@@ -487,9 +489,14 @@ li {
 }
 
 .form-button {
+  color: black;
   margin-top: 40px;
   width:  280px;
   padding-top: 15px;
+}
+
+.form-button:disabled {
+  color: silver;
 }
 
 .message-body {
@@ -605,13 +612,6 @@ li {
   z-index:  3;
 }
 
-/* .message-box-button {
-  border: 2px solid white;
-  width: 200px;
-  height: 60px;
-  border-radius: 5px;
-} */
-
 /******************************************************************************************************/
 
 @media only screen and (max-width: 1200px) {
@@ -634,6 +634,7 @@ li {
 
   .contact-list {
     flex-direction: column;
+    margin-top: 40px;
   }
 
 }
@@ -651,6 +652,12 @@ li {
   .form-control {
     justify-content: space-around;
     width: 500px;
+  }
+
+  .aboutMe {
+    font-size: 1em;
+    line-height: 200%;
+    max-width: 400px;
   }
 
 }
@@ -732,6 +739,9 @@ li {
     display: flex; 
   }
 
+  .name {
+    font-size: 1.1em;
+}
 
 }
 
@@ -740,10 +750,10 @@ li {
   .form-control {
     flex-direction: column;
   }
-
+/* 
   .nameWrapper {
     align-items: unset;
-  }
+  } */
   
   .name {
     font-size: 1.1em;
@@ -772,16 +782,14 @@ li {
 }
 
 @media only screen and (max-width: 500px) {
-  
-  .bio-script {
-    line-height: 300%
-  }
 
   .fieldset-style {
     padding-top: unset;
   }
 
-  
+  .nameWrapper {
+    align-items: unset;
+  }
 
   .form-control {
     width: 300px;
@@ -800,6 +808,10 @@ li {
 
   .header {
     height: 70px;
+  }
+
+  .burger-houser {
+    margin-top: 0px;
   }
 
   .navMenu {
