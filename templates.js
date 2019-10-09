@@ -102,16 +102,17 @@ const validateInputs = () => {
   
   let format = () => (/^[A-z\d]+@+[A-z\d]+(\.)+[A-z\d]+$/g.test(form[3].value) ? true : false);
   let lengthCheck = (val) => (val.length >= 5 ? true : false);
+  let nameLenCheck = (val) => (val.length >= 2 ? true : false);
   let check = function() {
 
     let stat = {
       returnAddr: (format() && form[3].classList.remove('error')),
-      name: (lengthCheck(form[2].value) && form[2].classList.remove('error')),
+      name: (nameLenCheck(form[2].value) && form[2].classList.remove('error')),
       subject: (lengthCheck(form[4].value) && form[4].classList.remove('error')),
       text: (lengthCheck(form[5].value) && form[5].classList.remove('error'))
     }
     
-    return stat;
+    return stat;none
   }
 
   function clearSubmit() {
