@@ -88,27 +88,68 @@ const watchEmail = () => {
   emailLink.removeEventListener('click', watchEmail);
 
   let Emailer = function() {
-    function esc(e) {
-      if(e.code === 'Escape') {
-        return closeEmail(emailForm)
-      }
-    };
     this.el = document.createElement('div');
-    this.el.loadEvents = function() {
-      this.addEventListener('keydown', (e) => esc(e))
-      // document.addEventListener('keydown', (e) => esc(e))
-      /*Can't seem to remove document listener */
-    };
+    this.el.keyHandle = new kHandle
+    this.el.focusEls = () => {
+      return emailForm.querySelectorAll(
+        'a[href]:not([disabled]), \
+         button:not([disabled]), \
+        textarea:not([disabled]), \
+        input[type="text"]:not([disabled]), \
+        input[type="email"]:not([disabled]), \
+        input[type="textarea"]:not([disabled]), \
+        input[type="reset"]:not([disabled]), \
+        input[type="submit"]:not([disabled]), \
+        input[type="button"]:not([disabled])'); 
+    }
+    this.el.kListen = () => {
+      let inputs = this.el.focusEls();
+      this.el.addEventListener('keydown', (e) => this.el.keyHandle.esc(e, closeEmail, emailForm))
+      this.el.addEventListener('keydown', (e) => this.el.keyHandle.tabTrap(e, inputs))
+    }
   };
+
+  function kHandle() {
+    this.tabTrap = (e, ins) => {
+
+      if (e.code === "Tab") {
+        if(e.shiftKey) {
+          if (document.activeElement === ins[1]) {
+            
+            let bet = () => (ins[ins[ins.length-1].disabled ? ins.length-2 : ins.length-1].focus())
+            setTimeout(bet, 400)
+            console.log(i, ins[i])  
+            e.preventDefault();
+          }
+        } else {
+          if (!ins[ins.length-1].disabled && document.activeElement === ins[ins.length-1]) {
+            ins[1].focus();
+            e.preventDefault();
+          } else if (document.activeElement === ins[ins.length-2]) {
+            let bet = () => (ins[ins[ins.length-1].disabled ? 1 : ins.length-1].focus())
+            setTimeout(bet, 400)
+            e.preventDefault();
+          }
+        }
+      }
+      
+    }
+
+    this.esc = (e, cb, f) => {
+      if(e.code === 'Escape') {
+        return cb(f)
+      }
+    }
+  }
   
   
   let eScreen = new Emailer;
   eScreen.el.setAttribute('class', 'ebox-wrap')
   eScreen.el.innerHTML = emailBox
   document.body.appendChild(eScreen.el)
-  eScreen.el.loadEvents();
-  validateInputs();
   let emailForm = document.querySelector('.email-form');
+  eScreen.el.kListen()
+  validateInputs();
 
   [emailForm[6], emailForm[7]].forEach(button => {
     button.addEventListener('click', () => { handleEmail(emailForm, handleSubmit, button.value) })
