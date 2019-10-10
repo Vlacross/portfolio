@@ -14,21 +14,23 @@ a {
   color: black;
 }
 
-a:hover {
+a:hover, button:hover {
   /* font-size: 1.8em; */
     text-shadow: 0 0 35px rgba(4, 2, 78, 0.993);
     box-shadow: none;
 }
 
 a:focus {
-  /* font-size: 1.8em; */
     text-shadow: 0 0 35px #046B99;  
     box-shadow: 0 0 15px #046B99 ;
-  /* box-shadow: 0 0 15px #046B99  */
 }
 
 a:visited {
   color: rgb(44, 43, 43);
+}
+
+p {
+  max-width: 800px;
 }
 
 .hidden {
@@ -282,7 +284,7 @@ li {
   justify-content: center;
   font-family: 'Exo 2', sans-serif;
   font-size: 1.2em;
-  height: 500px;
+  height: 300px;
 }
 
 .contact-list {
@@ -389,7 +391,7 @@ li {
 .projectCard {
   width: 90%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   transition-duration: 500ms;
   margin-bottom: 100px;
 }
@@ -409,6 +411,7 @@ li {
   transition-duration: 500ms;
   margin: 10px;
   color: black;
+  max-width: 800px
 }
 
 .link:hover {
@@ -625,6 +628,12 @@ li {
 
 /******************************************************************************************************/
 
+@media only screen and (max-width: 1300px) {
+  p, .link {
+    max-width: 500px;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
 
   .navMenu {
@@ -641,6 +650,10 @@ li {
 
   .rsvp {
     flex-direction: column-reverse;
+  }
+
+  .contact {
+    height: 500px;
   }
 
   .contact-list {
@@ -841,6 +854,10 @@ li {
   .navMenu {
     flex-direction: column;
 
+  }
+
+  .pitch {
+    font-size: 1.2em;
   }
 
 }

@@ -28,7 +28,7 @@ const emailBox =
           </div>
           
           <div class="form-element">
-          <label for="message-body" class="message-body-label">message body*</label>
+          <label for="message-body" class="message-body-label">Message body*</label>
             <textarea id="message-body" class="form-input  message-body" maxlength="10000" placeholder="Put your message here" minlength="5"> </textarea>
           </div>
 
