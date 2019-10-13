@@ -91,7 +91,7 @@ const watchEmail = () => {
     this.el = document.createElement('div');
     this.el.keyHandle = new kHandle
     this.el.focusEls = () => {
-      return emailForm.querySelectorAll(
+      let ins = emailForm.querySelectorAll(
         'a[href]:not([disabled]), \
          button:not([disabled]), \
         textarea:not([disabled]), \
@@ -100,7 +100,9 @@ const watchEmail = () => {
         input[type="textarea"]:not([disabled]), \
         input[type="reset"]:not([disabled]), \
         input[type="submit"]:not([disabled]), \
-        input[type="button"]:not([disabled])'); 
+        input[type="button"]:not([disabled])');
+        ins[1].focus();
+        return ins;
     }
     this.el.kListen = () => {
       let inputs = this.el.focusEls();
