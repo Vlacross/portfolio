@@ -8,16 +8,20 @@ const emailBox =
         <fieldset class="email-screen email-field">
 
         <div class="email-screen fieldset-style">
-          <legend></legend>
+          <legend class="fieldset-legend">* Required</legend>
 
           <div class="form-element">
           <label for="senders-name" class="senders-name-label">Name*</label>
             <input id="senders-name" class="form-input" type="text" placeholder="Your Name" autocomplete="nope" minlength="5" required />
+            <div class="input-validation">
+            </div>
           </div>
 
           <div class="form-element">
           <label for="email" class="form-input-label">Return E-mail address*</label>
             <input id="email" class="form-input" type="email" placeholder="Email address" autocomplete="nope" minlength="5" required />
+            <div class="input-validation">
+            </div>
           </div>
 
           
@@ -25,11 +29,15 @@ const emailBox =
           <div class="form-element">
           <label for="subject" class="subject-input-label">Subject*</label>
           <input id="subject" class="form-input" type="textarea" maxlength="1000" placeholder="Message topic" autocomplete="off" minlength="5" />
+          <div class="input-validation">
+            </div>
           </div>
           
           <div class="form-element">
           <label for="message-body" class="message-body-label">Message body*</label>
             <textarea id="message-body" class="form-input  message-body" maxlength="10000" placeholder="Put your message here" minlength="5"> </textarea>
+            <div class="input-validation">
+            </div>
           </div>
 
           <div class="form-element form-control">
@@ -98,21 +106,21 @@ let checkInt;
 
 const validateInputs = () => {
   let form = document.querySelector('.email-form');
+  let inputContainers = document.querySelector('.fieldset-style').children;
   form[7].setAttribute('disabled', true)
   
   let format = () => (/^[A-z\d]+@+[A-z\d]+(\.)+[A-z\d]+$/g.test(form[3].value) ? true : false);
-  let lengthCheck = (val) => (val.length >= 5 ? true : false);
-  let nameLenCheck = (val) => (val.length >= 2 ? true : false);
+  let lengthCheck = (val, num) => (val.length >= num ? true : false);
   let check = function() {
 
     let stat = {
-      returnAddr: (format() && form[3].classList.remove('error')),
-      name: (nameLenCheck(form[2].value) && form[2].classList.remove('error')),
-      subject: (lengthCheck(form[4].value) && form[4].classList.remove('error')),
-      text: (lengthCheck(form[5].value) && form[5].classList.remove('error'))
+      returnAddr: (format() && form[3].classList.remove('error') && (inputContainers[2].children[2].innerHTML = '')),
+      name: (lengthCheck(form[2].value, 2) && form[2].classList.remove('error')),
+      subject: (lengthCheck(form[4].value, 5) && form[4].classList.remove('error')),
+      text: (lengthCheck(form[5].value, 5) && form[5].classList.remove('error'))
     }
     
-    return stat;none
+    return stat;
   }
 
   function clearSubmit() {
@@ -123,30 +131,35 @@ const validateInputs = () => {
       else { allInputs-- }
     }
     if(allInputs === 0) { form[7].removeAttribute('disabled') }
+    return stat;
     }
   checkInt = window.setInterval(clearSubmit, 500)
 
   for (let i = 2; i < 6; i++) {
-    let stat = check()
+    let stat = () => check()
+    let valerr = (holder) => (`<span class="input-validation-message">${holder}</span>`)
     form[i].onblur = function() {
-      let holder = i === 3 ? 'must be proper email format!' : 'must be at least 5 characters long!';
-      i === 3 && !stat.returnAddr && form[3].setAttribute('placeholder', holder)
-      i === 3 && !stat.returnAddr && form[3].classList.add('error')
-      i === 3 && !stat.returnAddr && form[7].setAttribute('disabled', true)
+      let holder = i === 3 ? 'must be proper email format!' : i === 2 ? 'must be at least 2 characters long!' : 'must be at least 5 characters long!';
+      i === 3 && !stat().returnAddr && form[3].classList.add('error')
+      i === 3 && !stat().returnAddr && form[7].setAttribute('disabled', true)
+      i === 3 && inputContainers[2].children[1].classList.contains('error') && (inputContainers[2].children[2].innerHTML = valerr(holder))
+      // i === 3 && inputContainers[2].children[1].classList.contains('error') && console.log
+      // (inputContainers[2].children[2].innerHTML = valerr(holder))
 
-      i === 2 && !stat.name && form[2].setAttribute('placeholder', holder)
-      i === 2 && !stat.name && form[2].classList.add('error')
-      i === 2 && !stat.name && form[7].setAttribute('disabled', true)
+      i === 2 && !stat().name && form[2].classList.add('error')
+      i === 2 && !stat().name && form[7].setAttribute('disabled', true)
+      i === 2 && inputContainers[1].children[1].classList.contains('error') && (inputContainers[1].children[2].innerHTML = valerr(holder))
 
-      i === 4 && !stat.subject && form[4].setAttribute('placeholder', holder)
-      i === 4 && !stat.subject && form[4].classList.add('error')
-      i === 4 && !stat.subject && form[7].setAttribute('disabled', true)
+      i === 4 && !stat().subject && form[4].classList.add('error')
+      i === 4 && !stat().subject && form[7].setAttribute('disabled', true)
+      i === 4 && inputContainers[3].children[1].classList.contains('error') && (inputContainers[3].children[2].innerHTML = valerr(holder))
 
-      i === 5 && !stat.text && form[5].setAttribute('placeholder', holder)
-      i === 5 && !stat.text && form[5].classList.add('error')
-      i === 5 && !stat.text && form[7].setAttribute('disabled', true)
+      i === 5 && !stat().text && form[5].classList.add('error')
+      i === 5 && !stat().text && form[7].setAttribute('disabled', true)
+      i === 5 && inputContainers[4].children[1].classList.contains('error') && (inputContainers[4].children[2].innerHTML = valerr(holder))
      check()
     }
+    form[i].onfocus = function() {inputContainers[i-1].children[2].innerHTML = '';}
   };
 
 };

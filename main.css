@@ -481,6 +481,23 @@ li {
   font-family: 'Exo 2', sans-serif;
 }
 
+.input-validation {
+  height: 60px;
+}
+
+.input-validation-message {
+  color: #787c80;
+  width: 500px;
+  height: 40px;
+  /* display: none; */
+  background: #fefe97;
+  border-radius: 8px;
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 *:focus {
   box-shadow: 0 0 15px #046B99 inset;
   box-shadow: 0 0 15px #046B99;
@@ -494,6 +511,11 @@ li {
   font-size: 1.4em;
   align-items: center;
   padding-top: 20px;
+}
+
+.fieldset-legend {
+  width: 600px;
+  font-family: 'Exo 2', sans-serif;
 }
 
 .form-control {
@@ -691,13 +713,17 @@ li {
 
 @media only screen and (max-width: 700px) {
 
-  .form-input {
+  .form-input, .input-validation-message, .fieldset-legend {
+    width: 500px;
+  }
+
+   /* {
     width: 500px;
   }
 
   .form-button {
     width: 200px;
-  }
+  } */
 
 }
 
@@ -812,10 +838,16 @@ li {
 }
 
 @media only screen and (max-width: 520px) {
-  .form-input {
+  .form-input, .input-validation-message {
     width: 300px;
     font-size: .8em;
   }
+
+  .fieldset-legend {
+    width: 300px;
+    margin: 10px;
+  }
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -858,6 +890,10 @@ li {
 
   .pitch {
     font-size: 1.2em;
+  }
+
+  .email-screen {
+    padding: 0;
   }
 
 }
