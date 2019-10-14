@@ -143,8 +143,6 @@ const validateInputs = () => {
       i === 3 && !stat().returnAddr && form[3].classList.add('error')
       i === 3 && !stat().returnAddr && form[7].setAttribute('disabled', true)
       i === 3 && inputContainers[2].children[1].classList.contains('error') && (inputContainers[2].children[2].innerHTML = valerr(holder))
-      // i === 3 && inputContainers[2].children[1].classList.contains('error') && console.log
-      // (inputContainers[2].children[2].innerHTML = valerr(holder))
 
       i === 2 && !stat().name && form[2].classList.add('error')
       i === 2 && !stat().name && form[7].setAttribute('disabled', true)
