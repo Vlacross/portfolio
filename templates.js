@@ -9,6 +9,7 @@ const emailBox =
 
         <div class="email-screen fieldset-style">
           <legend class="fieldset-legend">* Required</legend>
+          <a href="#format-note" class="fieldset-legend format-note-link">Note*</a>
 
           <div class="form-element">
           <label for="senders-name" class="senders-name-label">Name*</label>
@@ -44,6 +45,15 @@ const emailBox =
           <input type="reset" value="Cancel" class="form-cancel form-input form-element form-button"></input>
           <input type="submit" value="Send" class="form-submit form-input form-element form-button"></input>
           </div>
+
+          <div class="form-element ">
+            <span id="format-note" class="fieldset-legend format-note">
+              Note: if your email includes the following characters:<br> 
+              <span class="email-format-characters" style="border-top: 1px solid silver;border-bottom: 1px solid silver;">!#$%&amp;'*+-/=?^_\`{|}~;</span> <br>
+              you may need to send an email through your personal mailing client to timvlasuk@gmail.com.
+            </span>
+          </div>
+
         </div>
           
 
@@ -142,22 +152,25 @@ const validateInputs = () => {
       let holder = i === 3 ? 'must be proper email format!' : i === 2 ? 'must be at least 2 characters long!' : 'must be at least 5 characters long!';
       i === 3 && !stat().returnAddr && form[3].classList.add('error')
       i === 3 && !stat().returnAddr && form[7].setAttribute('disabled', true)
-      i === 3 && inputContainers[2].children[1].classList.contains('error') && (inputContainers[2].children[2].innerHTML = valerr(holder))
+      i === 3 && inputContainers[3].children[1].classList.contains('error') && (inputContainers[3].children[2].innerHTML = valerr(holder))
 
       i === 2 && !stat().name && form[2].classList.add('error')
       i === 2 && !stat().name && form[7].setAttribute('disabled', true)
-      i === 2 && inputContainers[1].children[1].classList.contains('error') && (inputContainers[1].children[2].innerHTML = valerr(holder))
+      i === 2 && inputContainers[2].children[1].classList.contains('error') && (inputContainers[2].children[2].innerHTML = valerr(holder))
 
       i === 4 && !stat().subject && form[4].classList.add('error')
       i === 4 && !stat().subject && form[7].setAttribute('disabled', true)
-      i === 4 && inputContainers[3].children[1].classList.contains('error') && (inputContainers[3].children[2].innerHTML = valerr(holder))
+      i === 4 && inputContainers[4].children[1].classList.contains('error') && (inputContainers[4].children[2].innerHTML = valerr(holder))
 
       i === 5 && !stat().text && form[5].classList.add('error')
       i === 5 && !stat().text && form[7].setAttribute('disabled', true)
-      i === 5 && inputContainers[4].children[1].classList.contains('error') && (inputContainers[4].children[2].innerHTML = valerr(holder))
+      i === 5 && inputContainers[5].children[1].classList.contains('error') && (inputContainers[5].children[2].innerHTML = valerr(holder))
      check()
     }
-    form[i].onfocus = function() {inputContainers[i-1].children[2].innerHTML = '';}
+    form[i].onfocus = function() {
+      inputContainers[i].children[2].innerHTML = '';
+      console.log(i, inputContainers)
+    }
   };
 
 };
