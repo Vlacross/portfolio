@@ -25,7 +25,8 @@ menuOpen = () => {
     /*Works fine, though builds up listeners when menu is opened and closed(doesn't seem to 
     be taxing as it doesn't render or reload page) */
     menuLink.forEach(link => link.removeEventListener('click', links))
-  }, {once: true}))
+  }, {once: true}));
+  document.body.setAttribute('style', 'overflow-y: hidden;');
   menu.setAttribute('style', 'display: flex;')
   menu.setAttribute('open', 'true')
   navButton.classList.add('openNav');
@@ -35,7 +36,7 @@ menuOpen = () => {
   menuLabel.setAttribute('style', 'display: none;');
 };
 
-menuClose = () => {
+menuClose = () => {document.body.setAttribute('style', 'overflow-y: auto;');
   menu.setAttribute('style', 'display: none;')
   menu.setAttribute('open', 'false')
   navButton.classList.remove('openNav');

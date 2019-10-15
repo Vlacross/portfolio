@@ -57,6 +57,7 @@ const handleSubmit = (load, form) => {
 const closeEmail = (form) => {
   form ? form.reset() : undefined;
   document.querySelector('.ebox-wrap').remove();
+  document.body.setAttribute('style', 'overflow-y: auto;');
   emailLink.addEventListener('click', watchEmail)
 };
 
@@ -86,6 +87,7 @@ const handleEmail = (form, cb, val) => {
 
 const watchEmail = () => {
   emailLink.removeEventListener('click', watchEmail);
+  document.body.setAttribute('style', 'overflow-y: hidden;');
 
   let Emailer = function() {
     this.el = document.createElement('div');
@@ -101,7 +103,7 @@ const watchEmail = () => {
         input[type="reset"]:not([disabled]), \
         input[type="submit"]:not([disabled]), \
         input[type="button"]:not([disabled])');
-        ins[1].focus();
+        ins[2].focus();
         return ins;
     }
     this.el.kListen = () => {
@@ -120,7 +122,6 @@ const watchEmail = () => {
             
             let bet = () => (ins[ins[ins.length-1].disabled ? ins.length-2 : ins.length-1].focus())
             setTimeout(bet, 400)
-            console.log(i, ins[i])  
             e.preventDefault();
           }
         } else {
