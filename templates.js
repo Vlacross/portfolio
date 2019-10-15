@@ -119,7 +119,7 @@ const validateInputs = () => {
   let inputContainers = document.querySelector('.fieldset-style').children;
   form[7].setAttribute('disabled', true)
   
-  let format = () => (/^[A-z\d]+@+[A-z\d]+(\.)+[A-z\d]+$/g.test(form[3].value) ? true : false);
+  let format = () => (/^[A-Za-z\d\.\-]+@+[A-Za-z\d\.\-]+(\.)+[A-Za-z\d\.\-]+$/g.test(form[3].value) ? true : false);
   let lengthCheck = (val, num) => (val.length >= num ? true : false);
   let check = function() {
 
@@ -167,10 +167,7 @@ const validateInputs = () => {
       i === 5 && inputContainers[5].children[1].classList.contains('error') && (inputContainers[5].children[2].innerHTML = valerr(holder))
      check()
     }
-    form[i].onfocus = function() {
-      inputContainers[i].children[2].innerHTML = '';
-      console.log(i, inputContainers)
-    }
+    form[i].onfocus = function() {inputContainers[i].children[2].innerHTML = '';}
   };
 
 };

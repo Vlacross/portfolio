@@ -13,7 +13,6 @@ const handleSubmit = (load, form) => {
     const responseReturn = document.querySelector('#status-return-button')
     
     function closeMessage(e) {
-      console.log('bobbers')
       document.removeEventListener('keydown', closeMessage);
       document.removeEventListener('keydown', closeMessage);
       closeEmail()

@@ -497,6 +497,15 @@ li {
   align-items: center;
 }
 
+.format-note-link, .format-note-link:visited {
+  color: silver;
+}
+
+.email-format-characters {
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
+}
+
 *:focus {
   box-shadow: 0 0 15px #046B99 inset;
   box-shadow: 0 0 15px #046B99;
