@@ -111,6 +111,19 @@ p {
   margin-top: 10px;
 }
 
+.houser-input {
+  background: none;
+  position: fixed;
+  height: 70px;
+  width: 70px;
+  border: none;
+  border-radius: 50%;
+}
+
+.houser-input:active {
+  outline: none;
+}
+
 .burger-patty {
   border: none;
   background: unset;
