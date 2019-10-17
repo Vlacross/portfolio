@@ -102,7 +102,7 @@ const watchEmail = () => {
         input[type="reset"]:not([disabled]), \
         input[type="submit"]:not([disabled]), \
         input[type="button"]:not([disabled])');
-        ins[2].focus();
+        ins[2].focus({ preventScroll: true });
         return ins;
     }
     this.el.kListen = () => {

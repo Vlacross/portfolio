@@ -167,7 +167,12 @@ const validateInputs = () => {
       i === 5 && inputContainers[5].children[1].classList.contains('error') && (inputContainers[5].children[2].innerHTML = valerr(holder))
      check()
     }
-    form[i].onfocus = function() {inputContainers[i].children[2].innerHTML = '';}
+    form[i].onfocus = function(e) {
+      // inputContainers[i].children[0].scrollIntoView({behavior: 'smooth'})
+      e.preventDefault();
+      e.target.focus({ preventScroll: true });
+      inputContainers[i].children[2].innerHTML = '';
+    }
   };
 
 };
