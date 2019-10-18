@@ -56,7 +56,7 @@ const handleSubmit = (load, form) => {
 const closeEmail = (form) => {
   form ? form.reset() : undefined;
   document.querySelector('.ebox-wrap').remove();
-  document.body.setAttribute('style', 'overflow-y: auto;');
+  // document.body.setAttribute('style', 'overflow-y: auto;');
   emailLink.addEventListener('click', watchEmail)
 };
 
@@ -86,7 +86,7 @@ const handleEmail = (form, cb, val) => {
 
 const watchEmail = () => {
   emailLink.removeEventListener('click', watchEmail);
-  document.body.setAttribute('style', 'overflow-y: hidden;');
+  // document.body.setAttribute('style', 'overflow-y: hidden;');
 
   let Emailer = function() {
     this.el = document.createElement('div');
