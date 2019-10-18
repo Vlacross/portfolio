@@ -40,7 +40,6 @@ menuOpen = () => {
     be taxing as it doesn't render or reload page) */
     menuLink.forEach(link => link.removeEventListener('click', links))
   }, {once: true}));
-  document.body.setAttribute('style', 'position: fixed;');
   menu.setAttribute('style', 'display: flex;')
   menu.setAttribute('open', 'true')
   navButton.classList.add('openNav');
@@ -62,7 +61,8 @@ menuClose = () => {
 };
 
 toggleMenu = () => {
-  menu.getAttribute('open') === 'true' ? menuClose() : menuOpen()
+  menu.getAttribute('open') && document.body.setAttribute('style', 'position: fixed;');
+  menu.getAttribute('open') === 'true' ? menuClose() : menuOpen();
 };
 
 
