@@ -40,7 +40,7 @@ menuOpen = () => {
     be taxing as it doesn't render or reload page) */
     menuLink.forEach(link => link.removeEventListener('click', links))
   }, {once: true}));
-  document.body.setAttribute('style', 'overflow-y: hidden;');
+  document.body.setAttribute('style', 'position: fixed;');
   menu.setAttribute('style', 'display: flex;')
   menu.setAttribute('open', 'true')
   navButton.classList.add('openNav');
@@ -50,7 +50,8 @@ menuOpen = () => {
   menuLabel.setAttribute('style', 'display: none;');
 };
 
-menuClose = () => {document.body.setAttribute('style', 'overflow-y: auto;');
+menuClose = () => {
+  document.body.setAttribute('style', 'position: unset;');
   menu.setAttribute('style', 'display: none;')
   menu.setAttribute('open', 'false')
   navButton.classList.remove('openNav');
