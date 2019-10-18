@@ -787,7 +787,7 @@ li {
   overflow: scroll;
   padding-bottom: 20px;
   flex-direction: column;
-  overflow: auto;
+  /* overflow: auto; */
   }
 
   .navLink {
