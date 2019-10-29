@@ -440,6 +440,11 @@ li {
   max-width: 400px;
 }
 
+.screenshot-dance {
+  max-height: 400px;
+  max-width: 600px;
+}
+
 .graphics {
   max-width: 400px;
   max-height: 235px;
