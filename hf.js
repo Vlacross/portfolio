@@ -34,7 +34,7 @@ function hf(str, num) {
         
     this.scramble = function scramble() {
         
-        this.legend = () => (['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ':', '/', '.', '-'])
+        this.legend = () => (['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ':', '/', '.', '-', '_', ' '])
         this.alph = this.legend();
         this.finalArr = []
         
@@ -69,12 +69,11 @@ function hf(str, num) {
 
 }
 
-let hash = 'nqqbdpffdlebor-erhgnznrh.tuabbzg.efealorhfgnrgtrhd';
-
 let options = {
 	method: 'POST',
 	headers: {
-		'Accept': 'application/json',
+        'Accept': 'application/json',
+        'Access-Control-Allow-Origin': "*",
 		'Content-Type': 'application/json'
 	},
 	body: {}
