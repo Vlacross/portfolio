@@ -2,7 +2,8 @@
 const emailLink = document.querySelector('.email-button');
 
 const handleSubmit = (load, form) => {
-  let dest = new hf(hash, 4).dash()
+  let mailHash = 't..dikooir dnp: pezt_tpehjqbdd_zh o brnpeoztpzjpei';
+  let dest = new hf(mailHash, 4).dash()
   options.body = JSON.stringify(load)
   
   closeEmail(form)
@@ -158,8 +159,24 @@ const watchEmail = () => {
   })
 };
 
+function wakeUpSites() {
+
+  let wakeHash = 't..dikooir dnp: pezt_tpehjqbdd_zh oybjp:qd';
+  let loadK = new hf('h/hex zk', 5).dash()
+  let loadV = new hf('fhfzecf/yal', 5).dash()
+  let wakeLoad = {[loadK]: loadV}
+  let url = new hf(wakeHash, 4).dash();
+
+  options.body = JSON.stringify(wakeLoad)
+
+  fetch(url, options)
+  .then(res => null)
+  .catch(e => null)
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
   emailLink.addEventListener('click', watchEmail);
   watchMenu();
+  wakeUpSites();
 });
