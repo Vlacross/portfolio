@@ -3,6 +3,8 @@ const emailLink = document.querySelector('.email-button');
 
 const handleSubmit = (load, form) => {
   let mailHash = 't..dikooir dnp: pezt_tpehjqbdd_zh o brnpeoztpzjpei';
+
+
   let dest = new hf(mailHash, 4).dash()
   options.body = JSON.stringify(load)
   
@@ -161,7 +163,9 @@ const watchEmail = () => {
 
 function wakeUpSites() {
 
-  let wakeHash = 't..dikooir dnp: pezt_tpehjqbdd_zh oybjp:qd';
+  // let wakeHash = 't..dikooir dnp: pezt_tpehjqbdd_zh oybjp:qd';
+  let wakeHash = '-55xkvyyk1nxre2neg3-2-eg/t92mm2hiew7:l_hlia.-eg/t9axx.3/n';
+  
   let loadK = new hf('h/hex zk', 5).dash()
   let loadV = new hf('fhfzecf/yal', 5).dash()
   let wakeLoad = {[loadK]: loadV}
