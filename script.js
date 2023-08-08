@@ -183,4 +183,5 @@ document.addEventListener('DOMContentLoaded', () => {
   emailLink.addEventListener('click', watchEmail);
   watchMenu();
   wakeUpSites();
+  setupDetailToggle();
 });

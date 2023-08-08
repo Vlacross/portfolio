@@ -140,7 +140,67 @@ function watchMenu() {
 }
 
 
+// Allow toggle between project text
 
+
+function toggleDetail(button) {
+  // toggle classes
+
+  // set value vars
+  let projId = button.parentElement.parentElement.parentElement.id;
+  let sectionSelectionValue = button.parentElement.parentElement.details.value;
+  let negatedSelectionValue = sectionSelectionValue === 'concept' ? 'creation' : 'concept';
+
+  // assign class to vars
+  let sectionSelectionClass = `.${projId}-${sectionSelectionValue}`;
+  let negatedSelectionClass = `.${projId}-${negatedSelectionValue}`;
+  
+  // define show/hide identifiers
+  let sectionHideClass = "detail-section-hide";
+  let sectionShowClass = "detail-section-show";
+
+  // query html sections
+  let sectionSelection = document.querySelector(sectionSelectionClass);
+  let negatedSelection = document.querySelector(negatedSelectionClass);
+
+  // grab button text value for checking current view state
+  let buttonText = document.querySelectorAll(`.${projId}-button.detail-selected`)[0].children[1].innerHTML.toLowerCase(); 
+  // if target section doesn't match current view state, update button styles  
+  if (buttonText !== sectionSelectionValue) {
+    let toggleButtons = document.querySelectorAll(`.${projId}-button`);
+    toggleButtons.forEach(button => {
+      if (button.classList.contains('detail-selected')) {
+        button.classList.remove('detail-selected')
+      } else {
+        button.classList.add('detail-selected')
+      }
+    })
+  }
+
+  // if target section doesn't match current view state, toggle section classes 
+  if (!sectionSelection.classList.contains(sectionShowClass)) {
+    negatedSelection.classList.remove(sectionShowClass)
+    negatedSelection.classList.add(sectionHideClass)
+    sectionSelection.classList.add(sectionShowClass)
+    sectionSelection.classList.remove(sectionHideClass)
+  };
+
+}
+
+function handleDetailToggle(e, button) {
+  // Update radio value and call for UI update
+  e.preventDefault();
+  button.children[0].checked = true
+  toggleDetail(button)
+}
+
+function setupDetailToggle() {
+  // Set up listeners on all detail toggle buttons
+
+  document.querySelectorAll('.details-toggle-radio-wrapper').forEach(button => {
+    button.classList.add(`${button.parentElement.parentElement.parentElement.id}-button`)
+    button.addEventListener('click', (e) => handleDetailToggle(e, button))});
+}
 
 
 

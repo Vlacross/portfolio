@@ -4,9 +4,26 @@
 }
 
 
-
 body {
   background: rgba(255, 255, 255, 0.863);
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.863);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(138, 138, 138);
+  border-radius: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.863);
+}
+
+button {
+  all: unset;
 }
 
 a {
@@ -16,13 +33,15 @@ a {
 
 a:hover, button:hover {
   /* font-size: 1.8em; */
-    text-shadow: 0 0 35px rgba(4, 2, 78, 0.993);
+    text-shadow: 0 0 5px rgb(176 176 206);
     box-shadow: none;
 }
 
 a:focus {
-    text-shadow: 0 0 35px #046B99;  
-    box-shadow: 0 0 15px #046B99 ;
+    /* text-shadow: 0 0 35px #046B99;  
+    box-shadow: 0 0 15px #046B99 ; */
+    /* text-shadow: 0 0 5px rgb(176 176 206);
+    box-shadow: none; */
 }
 
 a:visited {
@@ -73,7 +92,7 @@ p {
   width: 100%;
   transition-duration: 1000ms;
   background: #ffffffcf;
-  box-shadow: 0 0 15px #484747c2 inset;
+  box-shadow: 2px 0 5px #484747c2 inset;
 }
 
 .navMenu {
@@ -177,7 +196,7 @@ p {
 }
 
 .navLink:hover {
-  font-size: 1.8em;
+  text-decoration: underline;
 }
 
 li {
@@ -188,17 +207,16 @@ li {
 
 .nameWrapper {
   color: white;
-  font-size: 2.3em;
-  font-family: 'Plaster', cursive;
-  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.687);
+  font-size: 2.4em !important;
+  letter-spacing: 14px;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.687);
   display: flex;
   flex-direction: column;
   padding-top: 20px;
   padding-bottom: 20px;
   align-items: center;
   margin-top: 0;
-  border-top: solid 1px rgba(0, 0, 0, 0.687);
-  border-bottom: solid 1px rgba(0, 0, 0, 0.687);
 }
 
 .nameToggleLast {
@@ -254,6 +272,15 @@ li {
   margin-top: 0;
 }
 
+.role-title {
+  font-size: 1.2em;
+}
+
+.role-title-based {
+  text-align: end;
+}
+
+
 .bio {
   display: flex;
   flex-direction: column;
@@ -261,8 +288,9 @@ li {
   justify-content: center;
   font-family: 'Exo 2', sans-serif;
   border-bottom: solid 1px silver;
+  border-top: solid 1px silver;
   margin-bottom: 80px;
-  
+  padding: 20px 0;
 }
 
 .bio h1 {
@@ -270,11 +298,17 @@ li {
 }
 
 .bioIntro {
-  border-bottom: solid 1px silver;
+  width: 30%;
 }
 
 .break {
   display: none;
+}
+
+.about-header {
+  text-align: center;
+  font-size: 40px;
+  margin: 20px;
 }
 
 .aboutMe {
@@ -283,8 +317,9 @@ li {
   max-width: 800px;
 }
 
-.signa {
+.disclaimer {
   font-weight: 700;
+  color: #5d0909;
 }
 
 
@@ -376,6 +411,11 @@ li {
 /******************************************************************************************************/
 
 
+.project-header {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
 .projectsWrapper { 
   height: unset;
   font-family: 'Quattrocento', serif;
@@ -455,6 +495,58 @@ li {
   max-width: 500px;
 }
 
+
+
+.details-toggle {
+  border: none;
+  display: flex;
+  padding-bottom: 0;
+}
+
+.details-toggle-radio {
+  display: none;
+}
+
+.detail-section-show {
+  animation: opacity 2s forwards;
+  display: block;
+}
+
+.detail-section-hide {
+  animation: opacity 2s forwards;
+  display: none;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+} 
+
+/* create onHover, change div color when selected */
+
+.details-toggle-radio-wrapper {
+  border: 1px solid grey;
+  border-radius: 12px;
+  margin: 0 5px;
+  padding: 0 5px;
+}
+
+.details-toggle-radio-wrapper:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.517);
+}
+
+.detail-selected {
+  background-color: rgb(225 225 225);
+  /* border-radius: 12px 12px 0 0; */
+}
+
 /******************************************************************************************************/
 
 .ebox-wrap {
@@ -525,9 +617,11 @@ li {
 }
 
 *:focus {
-  box-shadow: 0 0 15px #046B99 inset;
-  box-shadow: 0 0 15px #046B99;
+  box-shadow: 0 0 15px rgb(94 89 89); inset;
+  box-shadow: 0 0 15px rgb(94 89 89);;
   outline: none;
+  /* text-shadow: 0 0 5px rgb(176 176 206);
+  box-shadow: none; */
 }
 
 .fieldset-style {
@@ -680,6 +774,8 @@ li {
   p, .link {
     max-width: 500px;
   }
+
+  
 }
 
 @media only screen and (max-width: 1200px) {
@@ -719,6 +815,10 @@ li {
 
   .nameLength {
       display: none;
+  }
+
+  .bioIntro {
+    max-width: 400px;
   }
 
   .form-control {
@@ -820,6 +920,8 @@ li {
     height: 0px;
   }
 
+
+  
   .burger-houser {
     display: flex; 
   }
@@ -912,10 +1014,6 @@ li {
   .navMenu {
     flex-direction: column;
 
-  }
-
-  .pitch {
-    font-size: 1.2em;
   }
 
   .email-screen {
