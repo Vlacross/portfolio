@@ -45,6 +45,11 @@ p {
   max-width: 800px;
 }
 
+hr {
+  border-style: groove;
+  border-width: 1px
+}
+
 .hidden {
   display: none;
 }
@@ -808,10 +813,10 @@ li {
       display: none;
   }
 
-  .bioIntro {
-    /* max-width: 400px; */
-    /* width: 60%; */
-  }
+  /* .bioIntro {
+    max-width: 400px; */
+    /* width: 60%;
+  } */
 
   
   .form-control {
