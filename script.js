@@ -2,7 +2,7 @@
 const emailLink = document.querySelector('.email-button');
 
 const handleSubmit = (load, form) => {
-  let mailHash = '-55xkvyyk1nxre2neg3-.-eg/t9axx.3/nyna1regy3-e3tegk';
+  let mailHash = '-55xkvyyk1nxre2neg3-2-eg/t92mm2hiew7:l_hlia.-eg/t9axx.3/nyna1regy3-e3tegk';
 
 
   let dest = new hf(mailHash, 4).dash()
@@ -163,7 +163,7 @@ const watchEmail = () => {
 
 function wakeUpSites() {
 
-  let wakeHash = '-55xkvyyk1nxre2neg3-2-eg/t92mm2hiew7:l_hlia.-eg/t9axx.3/n';
+  let wakeHash = '-55xkvyyk1nxre2neg3-2-eg/t92mm2hiew7:l_hlia.-eg/t9axx.3/ny8ate29x';
   
 
   let loadK = new hf('1h17dj50', 5).dash()
