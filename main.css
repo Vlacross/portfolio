@@ -37,13 +37,6 @@ a:hover, button:hover {
     box-shadow: none;
 }
 
-a:focus {
-    /* text-shadow: 0 0 35px #046B99;  
-    box-shadow: 0 0 15px #046B99 ; */
-    /* text-shadow: 0 0 5px rgb(176 176 206);
-    box-shadow: none; */
-}
-
 a:visited {
   color: rgb(44, 43, 43);
 }
@@ -88,7 +81,7 @@ p {
   position: fixed;
   top: 0;
   display: flex;
-  height: 70px;
+  height: 60px;
   width: 100%;
   transition-duration: 1000ms;
   background: #ffffffcf;
@@ -102,7 +95,7 @@ p {
   align-items: center;
   /* background: #eeecece6; */
   left: 0;
-  height: 70px;
+  height: 60px;
   width: 100%;
   top: 0px;
   transition-duration: 1000ms;
@@ -617,9 +610,7 @@ li {
 }
 
 *:focus {
-  box-shadow: 0 0 15px rgb(94 89 89); inset;
-  box-shadow: 0 0 15px rgb(94 89 89);;
-  outline: none;
+  text-decoration: underline;
   /* text-shadow: 0 0 5px rgb(176 176 206);
   box-shadow: none; */
 }
@@ -818,9 +809,11 @@ li {
   }
 
   .bioIntro {
-    max-width: 400px;
+    /* max-width: 400px; */
+    /* width: 60%; */
   }
 
+  
   .form-control {
     justify-content: space-around;
     width: 500px;
@@ -834,7 +827,17 @@ li {
 
 }
 
+@media only screen and (max-width: 730px) {
 
+  .bioIntro {
+    width: 40%;
+  }
+  
+  .role-title-based {
+    text-align: unset;
+  }
+
+}
 
 
 @media only screen and (max-width: 700px) {
@@ -874,6 +877,10 @@ li {
 
   .rsvp-img {
     width: 100%;
+  }
+
+  .role-title-based {
+    display: none;
   }
  
 }
@@ -917,18 +924,17 @@ li {
   }
   
   .header {
-    height: 0px;
+    height: 60px;
   }
-
 
   
   .burger-houser {
     display: flex; 
   }
 
-  .name {
+  /* .name {
     font-size: 1.1em;
-}
+} */
 
 .break {
   display: inline;
@@ -941,10 +947,6 @@ li {
   .form-control {
     flex-direction: column;
   }
-/* 
-  .nameWrapper {
-    align-items: unset;
-  } */
   
   .name {
     font-size: 1.1em;
@@ -984,8 +986,9 @@ li {
     padding-top: unset;
   }
 
-  .nameWrapper {
-    align-items: unset;
+  .bioIntro {
+    width: 100%;
+    text-align: center;
   }
 
   .form-control {
@@ -995,6 +998,10 @@ li {
   .name {
     text-align: unset;
   }
+
+  .nameWrapper {
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -1003,9 +1010,9 @@ li {
     display: none;
   }
 
-  .header {
+  /* .header {
     height: 70px;
-  }
+  } */
 
   .burger-houser {
     margin-top: 0px;
