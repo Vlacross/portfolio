@@ -60,29 +60,25 @@
 
     <section role="document" class="bio-section">
 
+      <section role="region" class="bioIntro">
+        <h2 class="role-title">Remote Engineer</h2>
+        <h3 class="role-title-based">Based out of Washington</h3>
+      </section>
+
       <section role="article" class="bio">
 
-        <section role="region" class="bioIntro">
-          <h2 class="pitch">1.44 MegaBytes of twisted steel<span class="break"><br></span> and tech appeal.</h2>
-          <h2 class="pitch">I'm a Portland based developer.</h2>
-        </section>
 
         <section role="region" class="aboutMe">
 
-          <span class="bio-script"><b>contrive</b>: to create or bring about by deliberate use of skill;</span>
-          <br>
-          <br>
-          <span class="bio-script"><b>ameliorate</b>: to make something better.</span>
-          <br>
-          <br>
-          <p></p><span style="font-weight: 600;">About Me:</span> I like learning and maintaining the mechanics of things
-            as well as coming up with strategies and solutions by translating conceptual understanding to applicable
-            use.
-            I also feel strongly about Communication & Collaboration; a fresh flow of input and output is imperative to
-            growth.<br>
-          </p>
+         
+          <h2 class="about-header">About:</h2>
+          <p>After learning how to build and deploy web apps using cloud platforms, I started working as a Remote QA Engineer building perspective on Product Lifecycle and gaining exposure to a multitude of tooling and technologies.</p>
+          <p>I've always been drawn to the discovery and observation of systems, learning about the ecosystems in which they exist, and discovering how they are internally and externally connected.</p>
+          <!-- <p>Exploration of creative approach. Distinguishing between trends, industry standard, and innovations.</p> -->
+          <!-- <p>Drawn to the way machines can dance to perform things we can't</p> -->
+          
 
-          <span class="bio-script signa">You don't always need a problem to problem-solve.</span> <br>
+          <br>
           <!-- <p>Sandwiches are versatile, we could learn from them. </p> -->
         </section>
 
@@ -94,27 +90,49 @@
 
     <section role="document" class="wrapper projectsWrapper" id="projects">
       <ul role="list" class="projects-list">
-        <h2>Projects</h2>
+        <h2 class="project-header">Projects</h2>
 
         <li role="listitem" class="box projectCard">
           <section class="project-wrapper">
-            <section class="project-details">
+            <section id="p1" class="project-details">
 
-              <section>
-                <h2>MTB-trail-finder</h2>
-                <h3>(JQuery, Javascript)</h3>
-                <p>An app to find local mountainbike trails. I grew up fortunate to be within 3 miles of multiple local
-                  mountainbike trails and forest roads, but I was also very surprised to find a bunch of trails in my
-                  area I wasn't aware of. This site searches for documented trails, and offers a current weather
-                  forecast for that area.</p>
-              </section>
+              <h2>MTB-trail-finder (Currently Under Repair)</h2>
 
-              <section class="linksDiv">
-                <a role="button" class="link" rel="noreferrer noopener" target="_blank"
+              <form>
+                <fieldset class="details-toggle">
+                  <button class="details-toggle-radio-wrapper detail-selected">
+                    <input type="radio" id="concept" class="details-toggle-radio" name="details" value="concept" checked />
+                    <label for="concept">Concept</label>
+                  </button>   
+                  <button class="details-toggle-radio-wrapper">
+                    <input type="radio" id="creation" class="details-toggle-radio" name="details" value="creation" />
+                    <label for="creation">Creation</label>
+                  </button>                  
+                </fieldset>
+
+                
+                <section class="detail-section detail-section-show p1-concept">
+                  <p>A simple app to find local mountainbike trails.</p>
+                  <p>I grew up in an area rich in mountainbike trails and forest roads. When I searched my area with the open API, I was surprised to find a bunch of trails I wasn't aware of.</p>
+                </section>
+                
+                <section class="detail-section detail-section-hide p1-creation">
+                  <h3>(JQuery, Javascript)</h3>
+                  <p>This site searches for documented trails, and offers a current weather forecast for that area.</p>
+                  <p>This project got me hands on skills using APIs, and combining them in a way to deliver useful information to a user.</p>
+                  
+                </section>
+                
+              </form>
+              <p class="disclaimer">* Disclaimer: The open API used when creating this app has since been acquired and privatized so it is currently not displaying trails.</p>
+
+                <section class="linksDiv">
+                  <a role="button" class="link" rel="noreferrer noopener" target="_blank"
                   href="https://github.com/Vlacross/mtb-trail-api">Code</a>
-                <a role="button" class="link" rel="noreferrer noopener" target="_blank"
+                  <a role="button" class="link" rel="noreferrer noopener" target="_blank"
                   href="https://vlacross.github.io/">Live</a>
-              </section>
+                </section>
+                
 
             </section>
             <img role="img" class="mtb-img"
@@ -130,23 +148,54 @@
             <img role="img" class="rsvp-img"
               src="https://github.com/Vlacross/portfolio/blob/master/double-phones-rsvp.png?raw=true"
               alt="a screenshot of event planning and coordination app" />
-            <section class="project-details">
+            <section id="p2" class="project-details">
 
-              <section>
-                <h2>RSVP-event message board platform</h2>
-                <h3>(Javascript, Jquery, Express, MongooseJS, mocha/chai)</h3>
-                <p>An message board app that allows a user to create their own private event channel. My originial
+              <h2>RSVP-event message board platform</h2>
+
+              <form >
+                <fieldset class="details-toggle">
+                  <button class="details-toggle-radio-wrapper detail-selected">
+                    <input type="radio" id="concept" class="details-toggle-radio" name="details" value="concept" checked />
+                    <label for="concept">Concept</label>
+                  </button>   
+                  <button class="details-toggle-radio-wrapper">
+                    <input type="radio" id="creation" class="details-toggle-radio" name="details" value="creation" />
+                    <label for="creation">Creation</label>
+                  </button>                  
+                </fieldset>
+                
+                
+                <section class="detail-section detail-section-show p2-concept">
+                  <p>A message board app that allows a user to create their own private event channel.</p>
+                  <p>My originial inspiration for this came from trying to maintain a grasp on plans, changes, and updates to my wedding.</p>
+                  <p>As conversations occured in person, through text, e-mail, social media, etc, I longed for a simple single hub to communicate</p>
+                  <p>Although this wasn't it, I had fun with the building process.</p>
+                </section>
+              
+              
+                <section class="detail-section detail-section-hide p2-creation">
+                    <h3>(Javascript, Jquery, Express, MongooseJS)</h3>
+                    <h5>[<strong>Testing Tools</strong>: mocha/chai]</h5>
+                    <p>This was a first take at creating a classic blog-style message board app.</p>
+                    <p>When Building this app, I learned to implement single page site navigation and view state change using JQuery (woof).</p>
+                    <p>I also built my first hierachical account schema in MongooseJS, where Users and Admins have different privileges, and user groups are separated into Event groups.</p>
+                    <p>This gave me the basis to implement a log-in method using JWT tokens stored in localStorage to create sessions, and implement standard credential storage on the backEnd using bcryptJS.</p>
+                </section>
+                  
+              </form>
+
+                <!-- <p>A message board app that allows a user to create their own private event channel. My originial
                   inspiration for this came from trying to maintain a grasp on plans, changes, and updates to my
                   wedding. As conversations occured in person, through text, e-mail, social media, etc, I longed for a
                   simple single hub to communicate. Although this wasn't it, I had fun building this platform as it gave
-                  me a way to play around with custom schemas, user roles, and other new tools. </p>
-              </section>
+                  me a way to play around with custom schemas, user roles, and other new tools. </p> -->
 
               <section class="linksDiv">
                 <a role="button" class="link" rel="noreferrer noopener" target="_blank"
                   href="https://github.com/Vlacross/RSVP">Code</a>
                 <a role="button" class="link" rel="noreferrer noopener" target="_blank"
-                  href="https://rsvp-no-regrets.herokuapp.com/">Live</a>
+                  href="https://rsvp-no-regrets-heroku-22-b800aa9cff51.herokuapp.com/">Live</a>
+                  <!-- https://rsvp-no-regrets.herokuapp.com/ -->
               </section>
 
             </section>
@@ -158,21 +207,40 @@
 
         <li role="listitem" class="box projectCard">
           <section class="project-wrapper">
-            <section class="project-details">
+            <section id="p3" class="project-details">
 
-              <section>
-                <h2>Title - graphics</h2>
-                <h3>(HTML, CSS, JS)</h3>
-                <p>A goofy visual app that allows you to enter text and displays it with timed border-shadows. An
-                  afternoon of time on my hands might lead to things like this.</p>
-              </section>
+              <h2>Title - graphics</h2>
+              <form >
+                <fieldset class="details-toggle">
+                  <button class="details-toggle-radio-wrapper detail-selected">
+                    <input type="radio" id="concept" class="details-toggle-radio" name="details" value="concept" checked />
+                    <label for="concept">Concept</label>
+                  </button>   
+                  <button class="details-toggle-radio-wrapper">
+                    <input type="radio" id="creation" class="details-toggle-radio" name="details" value="creation" />
+                    <label for="creation">Creation</label>
+                  </button>                  
+                </fieldset>
+                
+                
+                <section class="detail-section detail-section-show p3-concept">
+                  <p>A whimsical visual component which fires border-shadows on entered text. AKA: An afternoon of time on my hands.</p>
+                </section>
+              
+              
+                <section class="detail-section detail-section-hide p3-creation">
+                  <h3>(HTML > CSS > JS)</h3>
+                  <p>While this is a seemingly simple effect, I had fun using a bucket sort method to map characters to timeOut groups in order to create the firing effect.</p>
+                </section>
+                  
+                </form>
 
-              <section class="linksDiv">
-                <a role="button" class="link" rel="noreferrer noopener" target="_blank"
-                  href="https://github.com/Vlacross/Port-practice">Code</a>
-                <a role="button" class="link" rel="noreferrer noopener" target="_blank"
-                  href="https://vlacross.github.io/Port-practice/">Live</a>
-              </section>
+                  <section class="linksDiv">
+                    <a role="button" class="link" rel="noreferrer noopener" target="_blank"
+                    href="https://github.com/Vlacross/Port-practice">Code</a>
+                    <a role="button" class="link" rel="noreferrer noopener" target="_blank"
+                    href="https://vlacross.github.io/Port-practice/">Live</a>
+                  </section>
 
             </section>
             <img role="img" class="mtb-img graphics"
@@ -185,22 +253,51 @@
 
         <li role="listitem" class="box projectCard">
           <section class="project-wrapper">
-            <section class="project-details">
+            <section id="p4" class="project-details">
 
-              <section>
-                <h2>Dance School</h2>
-                <h3>(Javascript, React, MongooseJS, Enzyme)</h3>
-                <p>A website platform prototype that allows the user to enroll in an online dance studio. The user is
-                  able to create an account and sign up for or drop out of courses. As my first attempt at using React
-                  and Redux, this was a great way to get a feel for building a user account interface from the browser
-                  to the database! </p>
-              </section>
+              <h2>Dance School</h2>
+              <form >
+                <fieldset class="details-toggle">
+                  <button class="details-toggle-radio-wrapper detail-selected">
+                    <input type="radio" id="concept" class="details-toggle-radio" name="details" value="concept" checked />
+                    <label for="concept">Concept</label>
+                  </button>   
+                  <button class="details-toggle-radio-wrapper">
+                    <input type="radio" id="creation" class="details-toggle-radio" name="details" value="creation" />
+                    <label for="creation">Creation</label>
+                  </button>                  
+                </fieldset>
+                
+                <section class="detail-section-show p4-concept">
+                  <p>A website that allows the user to view available classes and enroll in an online dance school.</p>
+                  <p>I've always loved dancing. I used to attend dance instruction classes at a local grange hall. There wasn't much advertisement or structure, just show up and pay at the door.</p>
+                  <p>I thought it would be great it there was a platform to help coordinate dance instructors with groups of people interested in attending.</p>
+                </section>
+                
+                <section class="detail-section-hide p4-creation">
+                  <h3>(CSS > JS > Redux > React > MongooseJS > MongoDB)</h3>
+                  <h5>[<strong>Testing Tools</strong>: Enzyme]</h5>
+                  <p>This project was a great way to use React to build and orchestrate components and their state.</p>
+                  <p>Migrating a similar hierachical schema from my message board app, Classes contain Teachers and Students; Teachers have elevated privilages.</p>
+                  <p>This was my first project using React. I had a lot of fun using Redux which gave me exposure to programming composition methods such as currying and higher order functions (reducers).</p>
+                  <p></p>
+                </section>
+
+
+
+              
+                <!-- <p>Similar to event planners but more focused. able to port billing into??</p> -->
+                <!-- <p> The user is -->
+                  <!-- able to create an account and sign up for or drop out of courses. As my first attempt at using React -->
+                  <!-- and Redux, this was a great way to get a feel for building a user account interface from the browser -->
+                  <!-- to the database!</p> -->
+              </form>
 
               <section class="linksDiv">
                 <a role="button" class="link" rel="noreferrer noopener" target="_blank"
                   href="https://github.com/Vlacross/Re-Cap-Client">Code</a>
                 <a role="button" class="link" rel="noreferrer noopener" target="_blank"
-                  href="https://learn-to-dance.herokuapp.com/">Live</a>
+                  href="https://learn-to-dance-client-22-5101c8b2fc3e.herokuapp.com/">Live</a>
               </section>
 
             </section>
