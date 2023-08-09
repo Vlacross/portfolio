@@ -62,28 +62,51 @@
 
       <section role="region" class="bioIntro">
         <h2 class="role-title">Remote Engineer</h2>
-        <h3 class="role-title-based">Based out of Washington</h3>
+        <h4 class="role-title-based">Based out of Bellingham, Wa</h4>
       </section>
 
       <section role="article" class="bio">
 
 
-        <section role="region" class="aboutMe">
+        <section id="p0" role="region" class="aboutMe">
 
          
-          <h2 class="about-header">About:</h2>
-          <p>After learning how to build and deploy web apps using cloud platforms, I started working as a Remote QA Engineer building perspective on Product Lifecycle and gaining exposure to a multitude of tooling and technologies.</p>
-          <p>I've always been drawn to the discovery and observation of systems, learning about the ecosystems in which they exist, and discovering how they are internally and externally connected.</p>
-          <!-- <p>Exploration of creative approach. Distinguishing between trends, industry standard, and innovations.</p> -->
-          <!-- <p>Drawn to the way machines can dance to perform things we can't</p> -->
-          
+          <h2 class="about-header">About</h2>
 
-          <br>
-          <!-- <p>Sandwiches are versatile, we could learn from them. </p> -->
+          <form>
+
+            <fieldset class="details-toggle details-toggle-about">
+              <button class="details-toggle-radio-wrapper toggle-left detail-selected">
+                <input type="radio" id="concept" class="details-toggle-radio" name="details" value="concept" checked />
+                <label for="about-header concept">Bio</label>
+              </button>   
+              <button class="details-toggle-radio-wrapper toggle-right">
+                <input type="radio" id="creation" class="details-toggle-radio" name="details" value="creation" />
+                <label for="about-header creation">Work</label>
+              </button>                  
+            </fieldset>
+            
+
+            <section class="detail-section detail-section-show p0-concept">
+              <p>I'm Tim. I enjoy most things outdoors, taking pictures, and <strong>food</strong>. I grew up gaming and tinkering with bikes and anything that moves.</p>
+              <p>The discovery and observation of systems is built-in to how I see the world. Learning about the ecosystems in which these systems exist, and discovering how they are connected inside and out has been an endless outlet of exploration. I love being able to apply this to whatever I'm working on.</p>
+            </section>
+            
+            <section class="detail-section detail-section-hide p0-creation">
+              <p>I'm a remote engineer based out of Bellingham WA with a focus in Quality Assurance. I started working as a Remote QA Engineer after learning how to build and deploy web apps using cloud platforms. Here, I started building perspective on Product Lifecycle and gaining exposure to a multitude of tooling and technologies.</p>
+            </section>
+            <!-- <p>Exploration of creative approach. Distinguishing between trends, industry standard, and innovations.</p> -->
+            <!-- <p>Drawn to the way machines can dance to perform things we can't</p> -->
+            
+            
+            <br>
+            <!-- <p>Sandwiches are versatile, we could learn from them. </p> -->
+          </form>
         </section>
 
       </section>
-
+      
+      <hr class="bio-divide">
     </section>
 
 
@@ -96,15 +119,16 @@
           <section class="project-wrapper">
             <section id="p1" class="project-details">
 
-              <h2>MTB-trail-finder (Currently Under Repair)</h2>
+              <h2>MTB-trail-finder</h2>
+              <h3>(Currently Under Repair)</h3>
 
               <form>
                 <fieldset class="details-toggle">
-                  <button class="details-toggle-radio-wrapper detail-selected">
+                  <button class="details-toggle-radio-wrapper toggle-left detail-selected">
                     <input type="radio" id="concept" class="details-toggle-radio" name="details" value="concept" checked />
                     <label for="concept">Concept</label>
                   </button>   
-                  <button class="details-toggle-radio-wrapper">
+                  <button class="details-toggle-radio-wrapper toggle-right">
                     <input type="radio" id="creation" class="details-toggle-radio" name="details" value="creation" />
                     <label for="creation">Creation</label>
                   </button>                  
@@ -154,11 +178,11 @@
 
               <form >
                 <fieldset class="details-toggle">
-                  <button class="details-toggle-radio-wrapper detail-selected">
+                  <button class="details-toggle-radio-wrapper toggle-left detail-selected">
                     <input type="radio" id="concept" class="details-toggle-radio" name="details" value="concept" checked />
                     <label for="concept">Concept</label>
                   </button>   
-                  <button class="details-toggle-radio-wrapper">
+                  <button class="details-toggle-radio-wrapper toggle-right">
                     <input type="radio" id="creation" class="details-toggle-radio" name="details" value="creation" />
                     <label for="creation">Creation</label>
                   </button>                  
@@ -167,7 +191,7 @@
                 
                 <section class="detail-section detail-section-show p2-concept">
                   <p>An event planning app that allows a user to create their own private event channel and communicate within it.</p>
-                  <p>During the planning of my wedding, plans and updates took place in person, through text, e-mail, social media, messaging apps, etc;I remember wishing there was a central source for coodination.</p>
+                  <p>During the planning of my wedding, plans and updates took place in person, through text, e-mail, social media, messaging apps, etc; I remember wishing there was a central source for coodination.</p>
                 </section>
               
               
@@ -203,11 +227,11 @@
               <h2>BoxShadow Fun</h2>
               <form >
                 <fieldset class="details-toggle">
-                  <button class="details-toggle-radio-wrapper detail-selected">
+                  <button class="details-toggle-radio-wrapper toggle-left detail-selected">
                     <input type="radio" id="concept" class="details-toggle-radio" name="details" value="concept" checked />
                     <label for="concept">Concept</label>
                   </button>   
-                  <button class="details-toggle-radio-wrapper">
+                  <button class="details-toggle-radio-wrapper toggle-right">
                     <input type="radio" id="creation" class="details-toggle-radio" name="details" value="creation" />
                     <label for="creation">Creation</label>
                   </button>                  
@@ -242,18 +266,18 @@
           <hr>
         </li>
 
-        <li role="listitem" class="box projectCard">
+        <li role="listitem" class="box projectCard projectCard-last">
           <section class="project-wrapper">
             <section id="p4" class="project-details">
 
               <h2>Dance School</h2>
               <form >
                 <fieldset class="details-toggle">
-                  <button class="details-toggle-radio-wrapper detail-selected">
+                  <button class="details-toggle-radio-wrapper toggle-left detail-selected">
                     <input type="radio" id="concept" class="details-toggle-radio" name="details" value="concept" checked />
                     <label for="concept">Concept</label>
                   </button>   
-                  <button class="details-toggle-radio-wrapper">
+                  <button class="details-toggle-radio-wrapper toggle-right">
                     <input type="radio" id="creation" class="details-toggle-radio" name="details" value="creation" />
                     <label for="creation">Creation</label>
                   </button>                  
@@ -304,7 +328,7 @@
       <section role="region" class="contact-list">
 
         <a role="button" class="contactLink" rel="noreferrer noopener" target="_blank" href="./Tim Vlasuk Resume.pdf">
-          View my Resume
+          Resume
         </a>
 
         <a role="button" class="contactLink github" rel="noreferrer noopener" target="_blank"
