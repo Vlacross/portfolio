@@ -30,12 +30,21 @@ button {
 a {
   text-decoration: none;
   color: black;
+  outline: none;
 }
 
 a:hover, button:hover {
   /* font-size: 1.8em; */
     text-shadow: 0 0 5px rgb(176 176 206);
     box-shadow: none;
+}
+
+a:focus {
+  text-shadow: 0 0 5px rgb(176 176 206);
+}
+
+button:focus {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.517);
 }
 
 a:visited {
@@ -370,36 +379,13 @@ li {
   min-width: 200px;
 }
 
-.resume-name {
-  display: unset;
-}
-
-.resume:hover .resume-name {
-  display: none;
-}
-
-.resume-link {
-  display: none;
-}
-
-.resume:hover .resume-link {
-  display: unset;
-}
-
 .email-text {
   display: unset;
+  outline: none;
 }
 
-.email:hover .email-text {
-  display: none;
-}
-
-.email-address {
-  display: none; 
-}
-
-.email:hover .email-address {
-  display: unset;
+.email-button {
+  box-shadow: none;
 }
 
 .contact-banner {
@@ -473,7 +459,7 @@ li {
   max-width: 800px
 }
 
-.link:hover {
+.link:hover, .link:focus {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.517);
 }
 
