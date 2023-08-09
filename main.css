@@ -6,6 +6,7 @@
 
 body {
   background: rgba(255, 255, 255, 0.863);
+  font-family: 'Quattrocento', serif;
 }
 
 body::-webkit-scrollbar {
@@ -105,7 +106,7 @@ hr {
   top: 0px;
   transition-duration: 1000ms;
   padding: 20px;
-  font-family: 'Exo 2', sans-serif;
+ 
 }
 
 .menu-selection-offset {
@@ -182,7 +183,7 @@ hr {
 
 .menu-label {
   text-align: center;
-  font-family: 'Exo 2', sans-serif;
+ 
 }
 
 .navLink {
@@ -261,6 +262,7 @@ li {
 /******************************************************************************************************/
 
 
+
 .bio-section {
   display: flex;
   flex-direction: column;
@@ -272,10 +274,11 @@ li {
 
 .role-title {
   font-size: 1.2em;
+  text-align: center;
 }
 
 .role-title-based {
-  text-align: end;
+  text-align: center;
 }
 
 
@@ -284,8 +287,7 @@ li {
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  font-family: 'Exo 2', sans-serif;
-  border-bottom: solid 1px silver;
+ 
   border-top: solid 1px silver;
   margin-bottom: 80px;
   padding: 20px 0;
@@ -320,6 +322,10 @@ li {
   color: #5d0909;
 }
 
+.bio-divide {
+  width: 90%;
+  margin-bottom: 40px;
+}
 
 /******************************************************************************************************/
 
@@ -328,9 +334,9 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: 'Exo 2', sans-serif;
+ 
   font-size: 1.2em;
-  height: 300px;
+  height: 250px;
 }
 
 .contact-list {
@@ -349,7 +355,6 @@ li {
   display: unset;
   border: none;
   background: none;
-  font-family: inherit;
 }
 
 .listingCard {
@@ -416,7 +421,6 @@ li {
 
 .projectsWrapper { 
   height: unset;
-  font-family: 'Quattrocento', serif;
 }
 
 .project-wrapper {
@@ -445,6 +449,10 @@ li {
   justify-content: space-around;
   transition-duration: 500ms;
   margin-bottom: 100px;
+}
+
+.projectCard-last {
+  margin-bottom: 40px;
 }
 
 .linksDiv {
@@ -499,11 +507,18 @@ li {
   border: none;
   display: flex;
   padding-bottom: 0;
+  margin-left: 30%;
+}
+
+.details-toggle-about {
+  justify-content: center;
+  margin-left: unset;
 }
 
 .details-toggle-radio {
   display: none;
 }
+
 
 .detail-section-show {
   animation: opacity 2s forwards;
@@ -530,10 +545,19 @@ li {
 /* create onHover, change div color when selected */
 
 .details-toggle-radio-wrapper {
-  border: 1px solid grey;
-  border-radius: 12px;
-  margin: 0 5px;
+  border: 1px solid silver;
+  width: 60px;
+  text-align: center;
   padding: 0 5px;
+  transition-duration: 500ms;
+}
+
+.toggle-left {
+  border-radius: 12px 0 0 12px;
+}
+
+.toggle-right {
+  border-radius: 0 12px 12px 0;
 }
 
 .details-toggle-radio-wrapper:hover {
@@ -544,6 +568,18 @@ li {
   background-color: rgb(225 225 225);
   /* border-radius: 12px 12px 0 0; */
 }
+
+@keyframes background-color {
+  0% {
+    background-color: 0;
+  }
+  50% {
+    background-color: 0.5;
+  }
+  100% {
+    background-color: 1;
+  }
+} 
 
 /******************************************************************************************************/
 
@@ -574,7 +610,7 @@ li {
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
-  font-family: 'Exo 2', sans-serif;
+ 
 }
 
 .form-input {
@@ -586,7 +622,7 @@ li {
   border-radius: 4px;
   padding: 10px;
   margin-top: 10px;
-  font-family: 'Exo 2', sans-serif;
+ 
 }
 
 .input-validation {
@@ -631,7 +667,7 @@ li {
 
 .fieldset-legend {
   width: 600px;
-  font-family: 'Exo 2', sans-serif;
+ 
 }
 
 .form-control {
@@ -683,7 +719,7 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Exo 2', sans-serif;
+ 
 }
 
 .response-return {
@@ -792,14 +828,14 @@ li {
     flex-direction: column-reverse;
   }
 
-  .contact {
-    height: 500px;
+  .details-toggle {
+    margin-left: 100px;
   }
 
-  .contact-list {
-    flex-direction: column;
-    margin-top: 40px;
+  .details-toggle-about {
+    margin-left: unset;
   }
+  
 
 }
 
@@ -812,11 +848,6 @@ li {
   .nameLength {
       display: none;
   }
-
-  /* .bioIntro {
-    max-width: 400px; */
-    /* width: 60%;
-  } */
 
   
   .form-control {
@@ -838,8 +869,17 @@ li {
     width: 40%;
   }
   
-  .role-title-based {
-    text-align: unset;
+  .projectCard-last {
+    margin-bottom: 20px;
+  }
+
+  .contact {
+    height: 330px;
+  }
+
+  .contact-list {
+    flex-direction: column;
+    padding: 10px 0;
   }
 
 }
@@ -884,9 +924,9 @@ li {
     width: 100%;
   }
 
-  .role-title-based {
+  /* .role-title-based {
     display: none;
-  }
+  } */
  
 }
 
@@ -957,6 +997,10 @@ li {
     font-size: 1.1em;
   }
 
+  .bioIntro {
+     width: 60%;
+  }
+
   .message-box {
     padding-top: 0;
     padding-right: 0;
@@ -1007,6 +1051,12 @@ li {
   .nameWrapper {
     text-align: center;
   }
+
+  .details-toggle {
+    margin-left: unset;
+    justify-content: center;
+  }
+  
 }
 
 @media only screen and (max-width: 400px) {
