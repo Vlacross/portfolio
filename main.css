@@ -543,8 +543,6 @@ button.toggle-full {
 .details-toggle {
   border: none;
   display: flex;
-  padding-bottom: 0;
-  margin-left: 30%;
 }
 
 .details-toggle-about {
@@ -584,7 +582,7 @@ button.toggle-full {
 
 .details-toggle-radio-wrapper {
   border: 1px solid silver;
-  width: 60px;
+  width: 100px;
   text-align: center;
   padding: 0 5px;
   transition-duration: 500ms;
@@ -874,9 +872,6 @@ button.toggle-full {
     flex-direction: column-reverse;
   }
 
-  .details-toggle {
-    margin-left: 100px;
-  }
 
   .details-toggle-about {
     margin-left: unset;
@@ -1104,7 +1099,6 @@ button.toggle-full {
 
   .details-toggle {
     margin-left: unset;
-    justify-content: center;
   }
   
 }

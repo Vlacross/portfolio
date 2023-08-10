@@ -141,7 +141,6 @@ function watchMenu() {
 
 // handle toggle for work history
 function toggleWorkHistory(button) {
-  console.log('handling button', button)
 
   let workHistorySection = document.querySelector('.work-history');
   let bioText = document.querySelector('.bio-text-work');
@@ -197,7 +196,6 @@ function toggleDetail(button) {
 
     // if work history open when toggling bio, cleanup section
     if (document.querySelector('.work-history').classList.contains('wh-open')) {
-      console.log('needs wh closed')
       let whButton = document.querySelector('.toggle-full')
       toggleWorkHistory(whButton)
     }
