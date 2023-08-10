@@ -139,18 +139,42 @@ function watchMenu() {
   window.setInterval(handleScroll, 250)
 }
 
+// handle toggle for work history
+function toggleWorkHistory(button) {
+  console.log('handling button', button)
+
+  let workHistorySection = document.querySelector('.work-history');
+  let bioText = document.querySelector('.bio-text-work');
+
+  let showClass = 'wh-open';
+  let showButtonClass = 'wh-open-button';
+
+  if (button.classList.contains(showButtonClass)) {
+    // hide section and remove styling from toggle button
+    workHistorySection.classList.remove(showClass)
+    button.classList.remove(showButtonClass)
+    bioText.classList.remove('bio-text-wh-shown')
+  } else {
+    // show section and apply styling to toggle button
+    workHistorySection.classList.add(showClass)
+    button.classList.add(showButtonClass)
+    bioText.classList.add('bio-text-wh-shown')
+  };
+}
 
 // Allow toggle between project text
-
 
 function toggleDetail(button) {
   // toggle classes
 
   // set value vars
   let projId = button.parentElement.parentElement.parentElement.id;
+  
+  
   let sectionSelectionValue = button.parentElement.parentElement.details.value;
   let negatedSelectionValue = sectionSelectionValue === 'concept' ? 'creation' : 'concept';
-
+ 
+  
   // assign class to vars
   let sectionSelectionClass = `.${projId}-${sectionSelectionValue}`;
   let negatedSelectionClass = `.${projId}-${negatedSelectionValue}`;
@@ -158,13 +182,26 @@ function toggleDetail(button) {
   // define show/hide identifiers
   let sectionHideClass = "detail-section-hide";
   let sectionShowClass = "detail-section-show";
-
+  
   // query html sections
   let sectionSelection = document.querySelector(sectionSelectionClass);
   let negatedSelection = document.querySelector(negatedSelectionClass);
-
+  
+  
   // grab button text value for checking current view state
   let buttonText = document.querySelectorAll(`.${projId}-button.detail-selected`)[0].children[1].innerHTML.toLowerCase(); 
+  
+  // handle bio toggles differently since inner text doesn't match that of project sections
+  if(projId == 'p0') {
+    buttonText = document.querySelectorAll(`.${projId}-button.detail-selected`)[0].children[0].value;
+
+    // if work history open when toggling bio, cleanup section
+    if (document.querySelector('.work-history').classList.contains('wh-open')) {
+      console.log('needs wh closed')
+      let whButton = document.querySelector('.toggle-full')
+      toggleWorkHistory(whButton)
+    }
+  }
   // if target section doesn't match current view state, update button styles  
   if (buttonText !== sectionSelectionValue) {
     let toggleButtons = document.querySelectorAll(`.${projId}-button`);
@@ -176,7 +213,7 @@ function toggleDetail(button) {
       }
     })
   }
-
+  
   // if target section doesn't match current view state, toggle section classes 
   if (!sectionSelection.classList.contains(sectionShowClass)) {
     negatedSelection.classList.remove(sectionShowClass)
@@ -190,8 +227,12 @@ function toggleDetail(button) {
 function handleDetailToggle(e, button) {
   // Update radio value and call for UI update
   e.preventDefault();
-  button.children[0].checked = true
-  toggleDetail(button)
+  if (button.parentElement.parentElement.parentElement.id == 'pwh') {
+    toggleWorkHistory(button)
+  } else {
+    button.children[0].checked = true
+    toggleDetail(button)
+  }
 }
 
 function setupDetailToggle() {

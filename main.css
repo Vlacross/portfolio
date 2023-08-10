@@ -310,6 +310,10 @@ li {
   width: 30%;
 }
 
+.bio-text-wh-shown {
+  margin-left: unset;
+}
+
 .break {
   display: none;
 }
@@ -330,6 +334,53 @@ li {
   font-weight: 700;
   color: #5d0909;
 }
+
+.work-history {
+  max-width: 800px;
+  display: none;
+  animation: opacity 1s forwards;
+}
+
+.work-history-empty {
+  display:none;
+}
+
+.wh-open {
+  display: unset;
+}
+
+.wh-open:focus {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.517);
+}
+
+.wh-open-button {
+  background-color: rgb(225 225 225);
+}
+
+.company {
+  text-decoration: underline;
+}
+
+.responsibilities-list {
+  list-style-type: circle;
+}
+
+li.responsibilities-list-item {
+  display: list-item;
+  border-bottom: none;
+}
+
+.work-history-toggle-wrapper {
+  display: flex;
+}
+
+button.toggle-full {
+  width: 180px;
+  border-radius: 12px;
+  padding: 5px;
+  margin-top: 20px;
+}
+
 
 .bio-divide {
   width: 90%;
@@ -499,6 +550,7 @@ li {
 .details-toggle-about {
   justify-content: center;
   margin-left: unset;
+  margin-bottom: 20px;
 }
 
 .details-toggle-radio {
@@ -507,7 +559,7 @@ li {
 
 
 .detail-section-show {
-  animation: opacity 2s forwards;
+  animation: opacity 2s both;
   display: block;
 }
 
@@ -793,6 +845,14 @@ li {
     max-width: 500px;
   }
 
+  .responsibilities-list-item {
+    max-width: 500px;
+    font-size: .8em;
+  }
+
+  .bio-text-wh-shown {
+    margin-left: 20px;
+  }
   
 }
 
@@ -822,7 +882,7 @@ li {
     margin-left: unset;
   }
   
-
+  
 }
 
 
@@ -840,11 +900,15 @@ li {
     justify-content: space-around;
     width: 500px;
   }
-
+  
   .aboutMe {
     font-size: 1em;
     line-height: 200%;
     max-width: 400px;
+  }
+
+  .bio-text-wh-shown {
+    margin-left: unset;
   }
 
 }
