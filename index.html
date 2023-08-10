@@ -77,23 +77,34 @@
 
             <fieldset class="details-toggle details-toggle-about">
               <button class="details-toggle-radio-wrapper toggle-left detail-selected">
-                <input type="radio" id="concept" class="details-toggle-radio" name="details" value="concept" checked />
+                <input type="radio"  class="details-toggle-radio" name="details" value="concept" checked />
                 <label for="about-header concept">Bio</label>
               </button>   
               <button class="details-toggle-radio-wrapper toggle-right">
-                <input type="radio" id="creation" class="details-toggle-radio" name="details" value="creation" />
+                <input type="radio"  class="details-toggle-radio" name="details" value="creation" />
                 <label for="about-header creation">Work</label>
               </button>                  
             </fieldset>
             
 
             <section class="detail-section detail-section-show p0-concept">
-              <p>I'm Tim. I enjoy most things outdoors, taking pictures, and <strong>food</strong>. I grew up gaming and tinkering with bikes and anything that moves.</p>
-              <p>The discovery and observation of systems is built-in to how I see the world. Learning about the ecosystems in which these systems exist, and discovering how they are connected inside and out has been an endless outlet of exploration. I love being able to apply this to whatever I'm working on.</p>
+              <p class="bio-text">I'm Tim. I enjoy most things outdoors, taking pictures, and <strong>food</strong>. I grew up gaming and tinkering with bikes and anything that moves.</p>
+              <p class="bio-text">The discovery and observation of systems is built-in to how I see the world. Learning about the ecosystems in which these systems exist, and discovering how they are connected inside and out has been an endless outlet of exploration. I love being able to apply this to whatever I'm working on.</p>
             </section>
             
             <section class="detail-section detail-section-hide p0-creation">
-              <p>I'm a remote engineer based out of Bellingham WA with a focus in Quality Assurance. I started working as a Remote QA Engineer after learning how to build and deploy web apps using cloud platforms. Here, I started building perspective on Product Lifecycle and gaining exposure to a multitude of tooling and technologies.</p>
+              <p class="bio-text bio-text-work">I'm a remote engineer based out of Bellingham WA with a focus in Quality Assurance. I started working as a Remote QA Engineer after learning how to build and deploy web apps using cloud platforms. Here, I started building perspective on Product Lifecycle and gaining exposure to a multitude of tooling and technologies.</p>
+       
+              <div id="pwh" class="details-toggle details-toggle-about work-history-toggle-wrapper">
+                <div class="details-toggle details-toggle-about work-history-toggle-wrapper">
+                  <div>
+                    <button class="details-toggle-radio-wrapper toggle-full">
+                      <label>See Work History</label>
+                    </button> 
+                  </div>
+                </div>
+              </div>
+       
             </section>
             <!-- <p>Exploration of creative approach. Distinguishing between trends, industry standard, and innovations.</p> -->
             <!-- <p>Drawn to the way machines can dance to perform things we can't</p> -->
@@ -102,6 +113,71 @@
             <br>
             <!-- <p>Sandwiches are versatile, we could learn from them. </p> -->
           </form>
+
+
+          
+          <section class="work-history pwh-concept">
+            <h4 class="company">
+              BeFunky	- Remote
+            </h4>
+            <h5 class="work-history-role">
+              Senior QA Engineer	Dec 2020 – Present
+            </h5>       
+            <ul class="responsibilities-list">
+              <li class="responsibilities-list-item">
+                Follow features and bug fixes through software development cycle for weekly web releases.
+              </li>
+              <li class="responsibilities-list-item">
+                Cross Device test packaged app for release in AppStore and PlayStore.
+              </li>
+              <li class="responsibilities-list-item">
+                Collaborate with Product and Dev teams to define scope and ensure expectations are met and tracked.
+              </li>
+              <li class="responsibilities-list-item">
+                Review code changes to aid in building test scope by pinpointing affected areas of app.
+              </li>
+              <li class="responsibilities-list-item">
+                Observe trends and troubleshoot issues using Mixpanel, Sentry, and GA4. 
+              </li>
+              <li class="responsibilities-list-item">
+                Engage with entire team to brainstorm and contribute to product vision and growth.
+              </li>
+              <li class="responsibilities-list-item">
+                Monitor existing Checkly and WebDriverIO tests; collaborate with devs to update tests when needed.
+              </li>
+            </ul>
+            <h4>
+              Bigtincan	- Remote
+            </h4>
+            <h5 class="work-history-role">
+              QA Engineer	Dec 2019 – Dec 2020
+            </h5>
+            <ul class="responsibilities-list">
+              
+              <li class="responsibilities-list-item">
+                Ensured webApp passed local build and deployment to staging servers.
+              </li>
+              <li class="responsibilities-list-item">
+                Ran manual regression testing on web app, crm integration, and mail client add-ins.
+              </li>
+              <li class="responsibilities-list-item">
+                Pulled custom data reports in Django Shell and automated when possible.
+              </li>
+              <li class="responsibilities-list-item">
+                Worked closely with support and dev teams to trouble-shoot, document, and resolve bugs.
+              </li>
+              <li class="responsibilities-list-item">
+                Contributed to exploratory testing campaign comparing Cypress, NightwatchJS, and Postman/Newman.
+              </li>
+            </ul>
+
+            </ul>
+
+            
+          </section>
+
+          <section class="work-history-empty pwh-creation"></section>
+          
         </section>
 
       </section>
@@ -125,11 +201,11 @@
               <form>
                 <fieldset class="details-toggle">
                   <button class="details-toggle-radio-wrapper toggle-left detail-selected">
-                    <input type="radio" id="concept" class="details-toggle-radio" name="details" value="concept" checked />
+                    <input type="radio"  class="details-toggle-radio" name="details" value="concept" checked />
                     <label for="concept">Concept</label>
                   </button>   
                   <button class="details-toggle-radio-wrapper toggle-right">
-                    <input type="radio" id="creation" class="details-toggle-radio" name="details" value="creation" />
+                    <input type="radio"  class="details-toggle-radio" name="details" value="creation" />
                     <label for="creation">Creation</label>
                   </button>                  
                 </fieldset>
@@ -179,11 +255,11 @@
               <form >
                 <fieldset class="details-toggle">
                   <button class="details-toggle-radio-wrapper toggle-left detail-selected">
-                    <input type="radio" id="concept" class="details-toggle-radio" name="details" value="concept" checked />
+                    <input type="radio"  class="details-toggle-radio" name="details" value="concept" checked />
                     <label for="concept">Concept</label>
                   </button>   
                   <button class="details-toggle-radio-wrapper toggle-right">
-                    <input type="radio" id="creation" class="details-toggle-radio" name="details" value="creation" />
+                    <input type="radio"  class="details-toggle-radio" name="details" value="creation" />
                     <label for="creation">Creation</label>
                   </button>                  
                 </fieldset>
@@ -228,11 +304,11 @@
               <form >
                 <fieldset class="details-toggle">
                   <button class="details-toggle-radio-wrapper toggle-left detail-selected">
-                    <input type="radio" id="concept" class="details-toggle-radio" name="details" value="concept" checked />
+                    <input type="radio"  class="details-toggle-radio" name="details" value="concept" checked />
                     <label for="concept">Concept</label>
                   </button>   
                   <button class="details-toggle-radio-wrapper toggle-right">
-                    <input type="radio" id="creation" class="details-toggle-radio" name="details" value="creation" />
+                    <input type="radio"  class="details-toggle-radio" name="details" value="creation" />
                     <label for="creation">Creation</label>
                   </button>                  
                 </fieldset>
@@ -274,11 +350,11 @@
               <form >
                 <fieldset class="details-toggle">
                   <button class="details-toggle-radio-wrapper toggle-left detail-selected">
-                    <input type="radio" id="concept" class="details-toggle-radio" name="details" value="concept" checked />
+                    <input type="radio"  class="details-toggle-radio" name="details" value="concept" checked />
                     <label for="concept">Concept</label>
                   </button>   
                   <button class="details-toggle-radio-wrapper toggle-right">
-                    <input type="radio" id="creation" class="details-toggle-radio" name="details" value="creation" />
+                    <input type="radio"  class="details-toggle-radio" name="details" value="creation" />
                     <label for="creation">Creation</label>
                   </button>                  
                 </fieldset>
